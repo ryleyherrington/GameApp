@@ -1,0 +1,159 @@
+{
+  "upcoming": [
+    {
+      "genre": "Wrestling", 
+      "last_updated": "September 28, 2015", 
+      "name": "WWE 2K16", 
+      "release_date": "October 27, 2015",
+      "color": "#04F58B",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "RPG", 
+      "image_url": "http://i.imgur.com/cFb1XPD.jpg", 
+      "last_updated": "September 28, 2015", 
+      "name": "Fallout 4", 
+      "release_date": "November 10, 2015",
+      "color": "#FF9933",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Adventure", 
+      "last_updated": "September 28, 2015", 
+      "name": "Scalebound", 
+      "release_date": "Q4 2016",
+      "color": "#33CCCC",
+	  "platforms": ["PS4","XBONE","PC"]
+	}, 
+    {
+      "genre": "Action", 
+      "last_updated": "September 28, 2015", 
+      "name": "Star Wars Battlefront", 
+      "release_date": "November 17, 2015",
+      "color": "#66FF99",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Action , RPG", 
+      "last_updated": "September 28, 2015", 
+      "name": "Final Fantasy XV", 
+      "release_date": "TBA 2016",
+      "color": "#F4FAAA",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Shooter", 
+      "last_updated": "September 28, 2015", 
+      "name": "Halo 5: Guardians", 
+      "release_date": "October 27, 2015",
+      "color": "#FF7733",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Shooter", 
+      "last_updated": "September 27, 2015", 
+      "name": "Call of Duty: Black Ops III", 
+      "release_date": "November 6, 2015",
+      "color": "#CBAABC",
+	  "platforms": ["XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Action", 
+      "last_updated": "September 27, 2015", 
+      "name": "Crackdown 3", 
+      "release_date": "Q3 2016",
+      "color": "#0457DC",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Strategy", 
+      "last_updated": "September 27, 2015", 
+      "name": "Halo Wars 2", 
+      "release_date": "Q3 2016",
+      "color": "#444444",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Action , Adventure", 
+      "last_updated": "September 27, 2015", 
+      "name": "Rise of the Tomb Raider", 
+      "release_date": "November 10, 2015",
+      "color": "#04F58B",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Action", 
+      "last_updated": "September 27, 2015", 
+      "name": "Quantum Break", 
+      "release_date": "April 5, 2016",
+      "color": "#04F58B",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Action , RPG", 
+      "last_updated": "September 27, 2015", 
+      "name": "Dark Souls III", 
+      "release_date": "April 2016",
+      "color": "#04F58B",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Adventure", 
+      "last_updated": "September 27, 2015", 
+      "name": "Beyond: Two Souls", 
+      "release_date": "TBA 2015",
+      "color": "#04F599",
+	  "platforms": ["PS4","XBONE","XBOX360", "PS3"]
+	}, 
+    {
+      "genre": "Action", 
+      "last_updated": "September 27, 2015", 
+      "name": "Deadpool", 
+      "release_date": "November 17, 2015",
+      "color": "#04BA77",
+	  "platforms": ["PS4","XBONE","XBOX360", "PC"]
+	}, 
+    {
+      "genre": "Adventure", 
+      "last_updated": "September 27, 2015", 
+      "name": "The Last Guardian", 
+      "release_date": "TBA 2016",
+      "color": "#1D1D99",
+	  "platforms": ["PS4","XBONE","XBOX360", "PC"]
+	}, 
+    {
+      "genre": "Shooter", 
+      "last_updated": "September 27, 2015", 
+      "name": "Tom Clancy's Rainbow Six Siege", 
+      "release_date": "December 1, 2015",
+      "color": "#FF1D99",
+	  "platforms": ["PS4","XBONE","XBOX360", "PC"]
+	}, 
+    {
+      "genre": "Shooter", 
+      "last_updated": "September 27, 2015", 
+      "name": "Homefront: The Revolution", 
+      "release_date": "TBA 2016",
+      "color": "#FFFF99",
+	  "platforms": ["PS4","XBONE","XBOX360", "PC"]
+	}, 
+    {
+      "genre": "Action/Adventure", 
+      "image_url": "https://i.imgur.com/6T4HnY4.jpg", 
+      "last_update": "September 27, 2015", 
+      "name": "Assassin's Creed: Syndicate", 
+      "release_date": "October 23, 2015",
+      "color": "#CCFF01",
+	  "platforms": ["PS4","XBONE","XBOX360", "PC"]
+	}, 
+    {
+      "genre": "Adventure", 
+      "image_url": "http://i.imgur.com/bTFeV4B.jpg", 
+      "last_update": "September 27, 2015", 
+      "name": "No Man's Sky", 
+      "release_date": "TBA",
+      "color": "#CC0066",
+	  "platforms": ["PS4","XBONE","XBOX360", "PC"]
+	}
+  ]
+  }
