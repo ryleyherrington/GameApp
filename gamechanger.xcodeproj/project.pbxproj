@@ -19,6 +19,9 @@
 		735EF2F01BA6224D009D0923 /* GameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2EE1BA6224D009D0923 /* GameCollectionViewCell.m */; };
 		735EF2F41BA629AC009D0923 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2F31BA629AC009D0923 /* Game.m */; };
 		735EF2F71BA63691009D0923 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2F61BA63691009D0923 /* NetworkHelper.m */; };
+		BCD00F1416F819E7B280A4CC /* Pods_gamechanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC3EF48E6CBF067ACCD7343 /* Pods_gamechanger.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BE8536381BC98A3700572D01 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8536371BC98A3700572D01 /* Games.swift */; settings = {ASSET_TAGS = (); }; };
+		BE85363A1BC98A3E00572D01 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8536391BC98A3E00572D01 /* Networking.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EC3EF48E6CBF067ACCD7343 /* Pods_gamechanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gamechanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		419DFB6CE0EE977A140A3BC6 /* Pods-gamechanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gamechanger.release.xcconfig"; path = "Pods/Target Support Files/Pods-gamechanger/Pods-gamechanger.release.xcconfig"; sourceTree = "<group>"; };
 		735EF2BB1BA60257009D0923 /* gamechanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gamechanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		735EF2BF1BA60257009D0923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		735EF2C01BA60257009D0923 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +59,10 @@
 		735EF2F31BA629AC009D0923 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		735EF2F51BA63691009D0923 /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
 		735EF2F61BA63691009D0923 /* NetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
+		A52306E2C4DCA144C08F2F0E /* Pods-gamechanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gamechanger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gamechanger/Pods-gamechanger.debug.xcconfig"; sourceTree = "<group>"; };
+		BE8536361BC98A3600572D01 /* gamechanger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gamechanger-Bridging-Header.h"; sourceTree = "<group>"; };
+		BE8536371BC98A3700572D01 /* Games.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		BE8536391BC98A3E00572D01 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD00F1416F819E7B280A4CC /* Pods_gamechanger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +90,8 @@
 				735EF2BD1BA60257009D0923 /* gamechanger */,
 				735EF2DA1BA60257009D0923 /* gamechangerTests */,
 				735EF2BC1BA60257009D0923 /* Products */,
+				864EBBAEC810CB1FB8B84964 /* Pods */,
+				F387D2795B7EA596E5D60F62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +107,8 @@
 		735EF2BD1BA60257009D0923 /* gamechanger */ = {
 			isa = PBXGroup;
 			children = (
+				BE8536351BC98A1F00572D01 /* Entities */,
+				BE8536341BC98A0D00572D01 /* Networking */,
 				735EF2EA1BA62015009D0923 /* DefaultFlowLayout.h */,
 				735EF2EB1BA62015009D0923 /* DefaultFlowLayout.m */,
 				735EF2C21BA60257009D0923 /* AppDelegate.h */,
@@ -142,6 +156,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		864EBBAEC810CB1FB8B84964 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A52306E2C4DCA144C08F2F0E /* Pods-gamechanger.debug.xcconfig */,
+				419DFB6CE0EE977A140A3BC6 /* Pods-gamechanger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE8536341BC98A0D00572D01 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BE8536391BC98A3E00572D01 /* Networking.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		BE8536351BC98A1F00572D01 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BE8536371BC98A3700572D01 /* Games.swift */,
+				BE8536361BC98A3600572D01 /* gamechanger-Bridging-Header.h */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		F387D2795B7EA596E5D60F62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EC3EF48E6CBF067ACCD7343 /* Pods_gamechanger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 735EF2E11BA60257009D0923 /* Build configuration list for PBXNativeTarget "gamechanger" */;
 			buildPhases = (
+				B07775AA9434374B6D87ED1F /* Check Pods Manifest.lock */,
 				735EF2B71BA60257009D0923 /* Sources */,
 				735EF2B81BA60257009D0923 /* Frameworks */,
 				735EF2B91BA60257009D0923 /* Resources */,
+				EAC539952B8DD0E83A3B90AB /* Embed Pods Frameworks */,
+				9E7EA6E046AA47285CF8BE5F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,6 +237,7 @@
 		735EF2B31BA60257009D0923 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Ryley Herrington";
 				TargetAttributes = {
@@ -238,14 +290,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9E7EA6E046AA47285CF8BE5F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gamechanger/Pods-gamechanger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B07775AA9434374B6D87ED1F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC539952B8DD0E83A3B90AB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gamechanger/Pods-gamechanger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		735EF2B71BA60257009D0923 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				735EF2F01BA6224D009D0923 /* GameCollectionViewCell.m in Sources */,
+				BE85363A1BC98A3E00572D01 /* Networking.swift in Sources */,
 				735EF2C41BA60257009D0923 /* AppDelegate.m in Sources */,
 				735EF2EC1BA62015009D0923 /* DefaultFlowLayout.m in Sources */,
+				BE8536381BC98A3700572D01 /* Games.swift in Sources */,
 				735EF2C11BA60257009D0923 /* main.m in Sources */,
 				735EF2F71BA63691009D0923 /* NetworkHelper.m in Sources */,
 				735EF2CA1BA60257009D0923 /* ViewController.m in Sources */,
@@ -374,27 +476,34 @@
 		};
 		735EF2E21BA60257009D0923 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A52306E2C4DCA144C08F2F0E /* Pods-gamechanger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = gamechanger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "gamechanger/gamechanger-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		735EF2E31BA60257009D0923 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 419DFB6CE0EE977A140A3BC6 /* Pods-gamechanger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = gamechanger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "gamechanger/gamechanger-Bridging-Header.h";
 			};
 			name = Release;
 		};
