@@ -15,12 +15,18 @@
 # limitations under the License.
 #
 import webapp2
+import json
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-		json = open("test.json", "r")
-		self.response.write(json)
+        self.response.write("Welcome to Gamers Forecast")
+
+class GamesHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.out.write("Games")
+
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/games', GamesHandler),
 ], debug=True)

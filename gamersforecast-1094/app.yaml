@@ -9,6 +9,11 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /(.*\.json)
+  static_files: static/\1
+  upload: static/(.*\.json)
+  mime_type: application/json
+
 - url: .*
   script: main.app
 
