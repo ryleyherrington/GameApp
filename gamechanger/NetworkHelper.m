@@ -9,6 +9,8 @@
 #import "NetworkHelper.h"
 #import "Game.h"
 #import "AppDelegate.h"
+#import "gamechanger-Swift.h"
+
 
 @implementation NetworkHelper
 
@@ -35,6 +37,13 @@
 - (void)getGamesWithCompletion:(void(^)(NSArray *games))completionBlock
 {
     NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    NetworkingProvider* pProvider = [[NetworkingProvider alloc] init];
+    
+    [pProvider GetGamesFromServerWithCompletion:^(NSArray* games){
+        return;
+    }];
+
     
     NSURL *url = [NSURL URLWithString:@"https://gamescraper-1037.appspot.com/upcoming"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
