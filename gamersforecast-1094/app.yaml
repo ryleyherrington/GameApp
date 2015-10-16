@@ -9,10 +9,26 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /
+  static_files: index.html
+  upload: index.html
+
 - url: /(.*\.json)
   static_files: static/\1
   upload: static/(.*\.json)
   mime_type: application/json
+
+- url: /css
+  static_dir: css
+
+- url: /less
+  static_dir: less
+
+- url: /img
+  static_dir: img
+
+- url: /js
+  static_dir: js
 
 - url: .*
   script: main.app
