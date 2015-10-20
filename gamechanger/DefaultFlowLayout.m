@@ -14,7 +14,7 @@
 {
     if (!(self = [super init])) return nil;
     
-//    self.itemSize = CGSizeMake(64, 64);
+    self.itemSize = CGSizeMake(self.collectionView.frame.size.width, 64);
     self.minimumInteritemSpacing = 5.0f;
     self.minimumLineSpacing = 5.0f;
     

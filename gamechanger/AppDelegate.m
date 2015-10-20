@@ -23,6 +23,7 @@
                                                           NSForegroundColorAttributeName, nil]];
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    
     return YES;
 }
 

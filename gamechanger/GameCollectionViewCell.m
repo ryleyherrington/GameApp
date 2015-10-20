@@ -45,7 +45,7 @@
         _dateView.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.f];
         [_dateView setNumberOfLines:0];
         [_dateView setLineBreakMode:NSLineBreakByWordWrapping];
-        _dateView.textAlignment = NSTextAlignmentCenter;
+        _dateView.textAlignment = NSTextAlignmentRight;
         
         [self addSubview:_dateView];
                 // Build a triangular path
