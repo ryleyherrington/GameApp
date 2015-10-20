@@ -45,7 +45,8 @@
     }];
 
     
-    NSURL *url = [NSURL URLWithString:@"https://gamescraper-1037.appspot.com/upcoming"];
+//    NSURL *url = [NSURL URLWithString:@"https://gamescraper-1037.appspot.com/upcoming"];
+    NSURL *url = [NSURL URLWithString:@"https://gamersforecast-1094.appspot.com/games.json"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     __block NSDictionary *json = nil;

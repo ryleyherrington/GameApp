@@ -12,7 +12,8 @@ import Alamofire
 
 @objc class NetworkingProvider: NSObject
 {
-    let SERVER_URL = "https://gamescraper-1037.appspot.com/upcoming/"
+//    let SERVER_URL = "https://gamescraper-1037.appspot.com/upcoming/"
+    let SERVER_URL = "https://gamersforecast-1094.appspot.com/games.json"
     
     @objc override init() {
         

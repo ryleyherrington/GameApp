@@ -19,6 +19,7 @@
 		735EF2F01BA6224D009D0923 /* GameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2EE1BA6224D009D0923 /* GameCollectionViewCell.m */; };
 		735EF2F41BA629AC009D0923 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2F31BA629AC009D0923 /* Game.m */; };
 		735EF2F71BA63691009D0923 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2F61BA63691009D0923 /* NetworkHelper.m */; };
+		73B57CAA1BCAE235003BC4C9 /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B57CA91BCAE235003BC4C9 /* GameCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BCD00F1416F819E7B280A4CC /* Pods_gamechanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC3EF48E6CBF067ACCD7343 /* Pods_gamechanger.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BE8536381BC98A3700572D01 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8536371BC98A3700572D01 /* Games.swift */; settings = {ASSET_TAGS = (); }; };
 		BE85363A1BC98A3E00572D01 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8536391BC98A3E00572D01 /* Networking.swift */; settings = {ASSET_TAGS = (); }; };
@@ -59,6 +60,7 @@
 		735EF2F31BA629AC009D0923 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		735EF2F51BA63691009D0923 /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
 		735EF2F61BA63691009D0923 /* NetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
+		73B57CA91BCAE235003BC4C9 /* GameCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionViewController.swift; sourceTree = "<group>"; };
 		A52306E2C4DCA144C08F2F0E /* Pods-gamechanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gamechanger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gamechanger/Pods-gamechanger.debug.xcconfig"; sourceTree = "<group>"; };
 		BE8536361BC98A3600572D01 /* gamechanger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gamechanger-Bridging-Header.h"; sourceTree = "<group>"; };
 		BE8536371BC98A3700572D01 /* Games.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				735EF2EE1BA6224D009D0923 /* GameCollectionViewCell.m */,
 				735EF2F51BA63691009D0923 /* NetworkHelper.h */,
 				735EF2F61BA63691009D0923 /* NetworkHelper.m */,
+				73B57CA91BCAE235003BC4C9 /* GameCollectionViewController.swift */,
 			);
 			path = gamechanger;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				735EF2F01BA6224D009D0923 /* GameCollectionViewCell.m in Sources */,
 				BE85363A1BC98A3E00572D01 /* Networking.swift in Sources */,
 				735EF2C41BA60257009D0923 /* AppDelegate.m in Sources */,
+				73B57CAA1BCAE235003BC4C9 /* GameCollectionViewController.swift in Sources */,
 				735EF2EC1BA62015009D0923 /* DefaultFlowLayout.m in Sources */,
 				BE8536381BC98A3700572D01 /* Games.swift in Sources */,
 				735EF2C11BA60257009D0923 /* main.m in Sources */,

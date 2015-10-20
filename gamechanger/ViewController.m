@@ -53,7 +53,7 @@
                                                             self.view.frame.size.width - 20,
                                                             90)];
     
-    _emptyLabel.text = @"We are downloading the ";
+    _emptyLabel.text = @"We are downloading the games.";
     _emptyLabel.textColor = [UIColor darkGrayColor];
     _emptyLabel.font = [UIFont fontWithName:@"HelveticaNeue-light" size:16.f];
     _emptyLabel.textAlignment = NSTextAlignmentCenter;
