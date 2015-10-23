@@ -89,9 +89,13 @@ class GameCollectionViewController: UICollectionViewController {
         let height = cell.frame.size.height;
         
         cell.imageView.image = UIImage(named: "placeholder")
-        //cell.openView.frame = CGRectMake(width+50, 0, width/2, height)
-                cell.openView.frame = CGRectMake(width, 0, width/2, height)
+        cell.openView.frame = CGRectMake(width, 0, width/2, height)
         cell.dateLabel.text = game.valueForKey("releaseDate") as? String
+        var platforms = game.valueForKey("platformString") as? String
+        if (platforms!.hasPrefix(",")) {
+            platforms = String(platforms!.characters.dropFirst()) 
+        }
+        cell.platforms.text = platforms
  
         let color = game.valueForKey("color") as? String
         cell.openView.backgroundColor = hexStringToUIColor(color!)
@@ -107,25 +111,32 @@ class GameCollectionViewController: UICollectionViewController {
         mask.path = path.CGPath
         cell.openView.layer.mask = mask
         
-        let loadURL = NSURL(string:game.imageUrl!)
-        let loadRequest = NSURLRequest(URL:loadURL!)
-        NSURLConnection.sendAsynchronousRequest(loadRequest,
-            queue: NSOperationQueue.mainQueue()) {
-                response, data, error in
-                
-                if error != nil {
-                    print("failed loading image")
-                    return
-                }
-                if data != nil {
-                    let returnedImage = UIImage(data: data!)
-                    cell.imageView.image = returnedImage
-                    cell.sendSubviewToBack(cell.imageView)
-                    //TODO:We should save to core data now
-                    return
-                }
+        if game.image != nil{
+            let returnedImage = UIImage(data:game.image!)
+            cell.imageView.image = returnedImage
+        } else{
+            let loadURL = NSURL(string:game.imageUrl!)
+            let loadRequest = NSURLRequest(URL:loadURL!)
+            NSURLConnection.sendAsynchronousRequest(loadRequest,
+                queue: NSOperationQueue.mainQueue()) {
+                    response, data, error in
+                    
+                    if error != nil {
+                        print("failed loading image")
+                        return
+                    }
+                    if data != nil {
+                        let returnedImage = UIImage(data: data!)
+                        cell.imageView.image = returnedImage
+                        cell.sendSubviewToBack(cell.imageView)
+                        let imageData = NSData(data: UIImageJPEGRepresentation(returnedImage!, 1.0)!)
+                        game.setValue(imageData, forKey: "image")
+                        
+                        return
+                    }
+            }
+            
         }
-        
         return cell
     }
 
@@ -140,13 +151,13 @@ class GameCollectionViewController: UICollectionViewController {
        
         
         if (cell.isOpen != false){
-            UIView.animateWithDuration(0.4, animations: { () -> Void in
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
                 cell.openView.frame = CGRectMake(width, 0, width/2, height)
                 }, completion: {(done) -> Void in
                     cell.isOpen = false;
             })
         } else {
-            UIView.animateWithDuration(0.4, animations: { () -> Void in
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
                     cell.openView.frame = CGRectMake(width-width/2, 0, width/2, height)
                 }, completion: { (done) -> Void in
                     cell.isOpen=true

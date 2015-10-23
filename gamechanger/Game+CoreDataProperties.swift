@@ -21,6 +21,7 @@ extension Game {
     @NSManaged var image: NSData?
     @NSManaged var genre: String?
     @NSManaged var lastUpdated: String?
+    @NSManaged var platformString: String?
     @NSManaged var platforms: NSSet?
 
 }

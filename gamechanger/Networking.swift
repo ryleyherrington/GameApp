@@ -56,7 +56,8 @@ import Alamofire
             
             for element in jsonGameArray {
                 
-               // var platformSringArray: [String] = [String]()
+                var platformSringArray: [String] = [String]()
+                var platformString = ""
                 
                 guard let name = element["name"].string else {
                     print("Invalid name json")
@@ -88,15 +89,15 @@ import Alamofire
                     return
                 }
                 
-//                guard let platforms: [JSON] = element["platforms"].arrayValue else {
-//                    print("Invalid platform json")
-//                    return
-//                }
+                guard let platforms: [JSON] = element["platforms"].arrayValue else {
+                    print("Invalid platform json")
+                    return
+                }
                 
-                //For later
-//                for platform in platforms {
-//                    platformSringArray.append(platform.stringValue)
-//                }
+                for platform in platforms {
+                    platformString = platformString + "," + platform.stringValue
+                    platformSringArray.append(platform.stringValue)
+                }
                 
                 var alreadySaved = false
                 for g in games {
@@ -118,6 +119,7 @@ import Alamofire
                     game.setValue(color, forKey: "color")
                     game.setValue(genre, forKey: "genre")
                     game.setValue(imageUrl, forKey: "imageUrl")
+                    game.setValue(platformString, forKey: "platformString")
                     
                     do {
                         try managedContext.save()
