@@ -93,7 +93,7 @@ class GameCollectionViewController: UICollectionViewController {
         cell.dateLabel.text = game.valueForKey("releaseDate") as? String
         var platforms = game.valueForKey("platformString") as? String
         if (platforms!.hasPrefix(",")) {
-            platforms = String(platforms!.characters.dropFirst()) 
+            platforms = String(platforms!.characters.dropFirst())
         }
         cell.platforms.text = platforms
  
