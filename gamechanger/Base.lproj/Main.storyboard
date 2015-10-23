@@ -30,6 +30,24 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jo3-RG-SSb">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="222"/>
                                         </imageView>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mae-FL-hcc">
+                                            <rect key="frame" x="315" y="0.0" width="285" height="222"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRc-hP-DTS">
+                                                    <rect key="frame" x="8" y="100" width="225" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW2-Ct-haM">
+                                                    <rect key="frame" x="8" y="193" width="225" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -42,7 +60,10 @@
                                     <constraint firstAttribute="trailingMargin" secondItem="jo3-RG-SSb" secondAttribute="trailing" constant="-8" id="wJY-0O-sGj"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="dateLabel" destination="WRc-hP-DTS" id="FbE-Nr-vu3"/>
                                     <outlet property="imageView" destination="jo3-RG-SSb" id="UY8-b0-rpr"/>
+                                    <outlet property="openView" destination="mae-FL-hcc" id="O01-I6-F8F"/>
+                                    <outlet property="platforms" destination="bW2-Ct-haM" id="Ly0-yt-IHI"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

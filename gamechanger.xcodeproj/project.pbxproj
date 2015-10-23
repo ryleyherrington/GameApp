@@ -23,6 +23,18 @@
 		73F3824F1BD696A800365BCA /* Platform+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F3824B1BD696A800365BCA /* Platform+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
 		73F382501BD696A800365BCA /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F3824C1BD696A800365BCA /* Platform.swift */; settings = {ASSET_TAGS = (); }; };
 		73F382551BD6B87B00365BCA /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F382541BD6B87B00365BCA /* GameCell.swift */; settings = {ASSET_TAGS = (); }; };
+		73F3825A1BD9C8B500365BCA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F382581BD9C8B500365BCA /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		73F3825B1BD9C8B500365BCA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F382591BD9C8B500365BCA /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		73F3825D1BD9CC6C00365BCA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3825C1BD9CC6C00365BCA /* AudioToolbox.framework */; };
+		73F3825F1BD9CC7300365BCA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3825E1BD9CC7300365BCA /* CFNetwork.framework */; };
+		73F382611BD9CC7900365BCA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F382601BD9CC7900365BCA /* CoreGraphics.framework */; };
+		73F382631BD9CC9F00365BCA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F382621BD9CC9F00365BCA /* QuartzCore.framework */; };
+		73F382651BD9CCA500365BCA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F382641BD9CCA500365BCA /* CoreLocation.framework */; };
+		73F382671BD9CCAC00365BCA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F382661BD9CCAC00365BCA /* Security.framework */; };
+		73F382691BD9CCB300365BCA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F382681BD9CCB300365BCA /* SystemConfiguration.framework */; };
+		73F3826B1BD9CCBD00365BCA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3826A1BD9CCBD00365BCA /* libz.tbd */; };
+		73F3826D1BD9CCC500365BCA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3826C1BD9CCC500365BCA /* libsqlite3.tbd */; };
+		73F3826F1BD9CCCB00365BCA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3826E1BD9CCCB00365BCA /* StoreKit.framework */; };
 		BCD00F1416F819E7B280A4CC /* Pods_gamechanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC3EF48E6CBF067ACCD7343 /* Pods_gamechanger.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BE8536381BC98A3700572D01 /* Games2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8536371BC98A3700572D01 /* Games2.swift */; settings = {ASSET_TAGS = (); }; };
 		BE85363A1BC98A3E00572D01 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8536391BC98A3E00572D01 /* Networking.swift */; settings = {ASSET_TAGS = (); }; };
@@ -66,6 +78,18 @@
 		73F3824C1BD696A800365BCA /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		73F382521BD6A52200365BCA /* gamechanger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gamechanger-Bridging-Header.h"; sourceTree = "<group>"; };
 		73F382541BD6B87B00365BCA /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		73F382581BD9C8B500365BCA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		73F382591BD9C8B500365BCA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		73F3825C1BD9CC6C00365BCA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		73F3825E1BD9CC7300365BCA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		73F382601BD9CC7900365BCA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		73F382621BD9CC9F00365BCA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		73F382641BD9CCA500365BCA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		73F382661BD9CCAC00365BCA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		73F382681BD9CCB300365BCA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		73F3826A1BD9CCBD00365BCA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		73F3826C1BD9CCC500365BCA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		73F3826E1BD9CCCB00365BCA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A52306E2C4DCA144C08F2F0E /* Pods-gamechanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gamechanger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gamechanger/Pods-gamechanger.debug.xcconfig"; sourceTree = "<group>"; };
 		BE8536371BC98A3700572D01 /* Games2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Games2.swift; sourceTree = "<group>"; };
 		BE8536391BC98A3E00572D01 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -76,7 +100,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F3826F1BD9CCCB00365BCA /* StoreKit.framework in Frameworks */,
+				73F3826D1BD9CCC500365BCA /* libsqlite3.tbd in Frameworks */,
+				73F3826B1BD9CCBD00365BCA /* libz.tbd in Frameworks */,
+				73F382691BD9CCB300365BCA /* SystemConfiguration.framework in Frameworks */,
+				73F382671BD9CCAC00365BCA /* Security.framework in Frameworks */,
+				73F382651BD9CCA500365BCA /* CoreLocation.framework in Frameworks */,
+				73F382631BD9CC9F00365BCA /* QuartzCore.framework in Frameworks */,
+				73F382611BD9CC7900365BCA /* CoreGraphics.framework in Frameworks */,
+				73F3825F1BD9CC7300365BCA /* CFNetwork.framework in Frameworks */,
+				73F3825D1BD9CC6C00365BCA /* AudioToolbox.framework in Frameworks */,
 				BCD00F1416F819E7B280A4CC /* Pods_gamechanger.framework in Frameworks */,
+				73F3825B1BD9C8B500365BCA /* Parse.framework in Frameworks */,
+				73F3825A1BD9C8B500365BCA /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +245,18 @@
 		F387D2795B7EA596E5D60F62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73F3826E1BD9CCCB00365BCA /* StoreKit.framework */,
+				73F3826C1BD9CCC500365BCA /* libsqlite3.tbd */,
+				73F3826A1BD9CCBD00365BCA /* libz.tbd */,
+				73F382681BD9CCB300365BCA /* SystemConfiguration.framework */,
+				73F382661BD9CCAC00365BCA /* Security.framework */,
+				73F382641BD9CCA500365BCA /* CoreLocation.framework */,
+				73F382621BD9CC9F00365BCA /* QuartzCore.framework */,
+				73F382601BD9CC7900365BCA /* CoreGraphics.framework */,
+				73F3825E1BD9CC7300365BCA /* CFNetwork.framework */,
+				73F3825C1BD9CC6C00365BCA /* AudioToolbox.framework */,
+				73F382581BD9C8B500365BCA /* Bolts.framework */,
+				73F382591BD9C8B500365BCA /* Parse.framework */,
 				0EC3EF48E6CBF067ACCD7343 /* Pods_gamechanger.framework */,
 			);
 			name = Frameworks;
@@ -262,7 +310,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ryley Herrington";
 				TargetAttributes = {
 					735EF2BA1BA60257009D0923 = {
@@ -443,6 +491,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -510,8 +559,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = gamechanger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herrington.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "gamechanger/gamechanger-Bridging-Header.h";
@@ -527,8 +581,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = gamechanger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herrington.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "gamechanger/gamechanger-Bridging-Header.h";
@@ -549,6 +608,7 @@
 				);
 				INFOPLIST_FILE = gamechangerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herrington.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gamechanger.app/gamechanger";
 			};
@@ -564,6 +624,7 @@
 				);
 				INFOPLIST_FILE = gamechangerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herrington.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gamechanger.app/gamechanger";
 			};

@@ -4,3 +4,4 @@
 #import "AppDelegate.h"
 #import "GameCollectionViewCell.h"
 #import "DefaultFlowLayout.h"
+#import <Parse/Parse.h>
