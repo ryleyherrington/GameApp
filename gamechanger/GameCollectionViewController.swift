@@ -17,8 +17,9 @@ class GameCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         navigationController?.hidesBarsOnSwipe = true
-//        navigationController?.title = "Gamers Forecast"
         self.title = "Gamers Forecast"
+        
+       // collectionView!.registerClass(GameCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         let network = NetworkingProvider()
         network.GetGamesFromServerWithCompletion { (pGames) -> Void in
@@ -85,13 +86,8 @@ class GameCollectionViewController: UICollectionViewController {
         cell.imageView.image = nil
         cell.isOpen = false
         
-        //    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeGesture:)];
-        //    swipeGesture.direction = UISwipeGestureRecognizerDirectionUp;
-        //    [collectionView addGestureRecognizer:swipeGesture];
-        
         let game = games[indexPath.row]
         
-        cell.nameLabel.text = game.valueForKey("name") as? String
         cell.backgroundColor = UIColor.redColor()
         cell.imageView.image = UIImage(named: "placeholder")
         if let label = cell.dateLabel{
@@ -135,7 +131,9 @@ class GameCollectionViewController: UICollectionViewController {
         if (cell.isOpen){
             UIView.animateWithDuration(0.4, animations: { () -> Void in
                 if let openView = cell.openView {
+                    cell.bringSubviewToFront(openView)
                     openView.frame = CGRectMake(width, 0, width/2, height)
+                    
                 }
                 }, completion: {(done) -> Void in
                     if let openView = cell.openView{

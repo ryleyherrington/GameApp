@@ -27,46 +27,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="222"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbS-wD-Tdy">
-                                            <rect key="frame" x="297" y="0.0" width="303" height="222"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTL-Hy-AiK">
-                                                    <rect key="frame" x="130" y="100" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jo3-RG-SSb">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="222"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwX-uT-QrN">
-                                            <rect key="frame" x="8" y="8" width="584" height="42"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="TwX-uT-QrN" secondAttribute="trailing" id="MQu-mC-XHN"/>
                                     <constraint firstItem="jo3-RG-SSb" firstAttribute="leading" secondItem="opG-77-de2" secondAttribute="leadingMargin" constant="-8" id="Mv3-gx-faq"/>
-                                    <constraint firstAttribute="leadingMargin" secondItem="TwX-uT-QrN" secondAttribute="leading" id="QGj-Fm-H6u"/>
                                     <constraint firstItem="jo3-RG-SSb" firstAttribute="width" secondItem="opG-77-de2" secondAttribute="width" id="TvP-u1-WYR"/>
-                                    <constraint firstAttribute="topMargin" secondItem="TwX-uT-QrN" secondAttribute="top" id="Vhj-QV-eiJ"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="jo3-RG-SSb" secondAttribute="bottom" constant="-8" id="blF-Se-ogD"/>
                                     <constraint firstItem="jo3-RG-SSb" firstAttribute="height" secondItem="opG-77-de2" secondAttribute="height" id="fz0-Hd-OML"/>
                                     <constraint firstItem="jo3-RG-SSb" firstAttribute="top" secondItem="opG-77-de2" secondAttribute="topMargin" constant="-8" id="v3p-fg-ZxI"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="jo3-RG-SSb" secondAttribute="trailing" constant="-8" id="wJY-0O-sGj"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="dateLabel" destination="RTL-Hy-AiK" id="1Cs-qD-S62"/>
                                     <outlet property="imageView" destination="jo3-RG-SSb" id="UY8-b0-rpr"/>
-                                    <outlet property="nameLabel" destination="TwX-uT-QrN" id="Bhq-z5-t2D"/>
-                                    <outlet property="openView" destination="VbS-wD-Tdy" id="uyJ-jB-cqn"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -76,7 +52,8 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="AHH-v2-x6P">
-                        <barButtonItem key="rightBarButtonItem" title="Sort" id="EXB-pG-fwp">
+                        <barButtonItem key="rightBarButtonItem" image="filter" id="EXB-pG-fwp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="barButtonPressed:" destination="yON-Th-2im" id="dpy-m1-wit"/>
                             </connections>
@@ -106,4 +83,7 @@
             <point key="canvasLocation" x="1109" y="555"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="filter" width="25" height="25"/>
+    </resources>
 </document>

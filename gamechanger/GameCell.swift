@@ -12,8 +12,6 @@ class GameCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    //@IBOutlet weak var openView: UIView!
-    //@IBOutlet weak var dateLabel: UILabel!
     
     var isOpen:Bool
     var openView: UIView!
@@ -22,29 +20,25 @@ class GameCell: UICollectionViewCell {
     override init(frame: CGRect) {
         self.isOpen = false
         super.init(frame:frame)
-        //        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        //        nameLabel = UILabel(frame: CGRect(x: 0, y: 10, width: frame.size.width, height: frame.size.height/3))
-        //        openView = UILabel(frame: CGRect(x: 0, y: 10, width: frame.size.width, height: frame.size.height/3))
         
+        imageView.clipsToBounds = true
+        imageView.backgroundColor = UIColor.clearColor()
         
-        
-        self.imageView.clipsToBounds = true
-        self.imageView.backgroundColor = UIColor.clearColor()
-        
-        nameLabel.font = UIFont (name: "HelveticaNeue-Light", size: 18)
+        self.nameLabel.font = UIFont (name: "HelveticaNeue-Light", size: 18)
         nameLabel.textAlignment = .Left
         nameLabel.textColor = UIColor.whiteColor()
         nameLabel.numberOfLines = 1;
         nameLabel.backgroundColor = UIColor.clearColor()
         
-        let width = self.frame.size.width
-        let height = self.frame.size.height
+        
+        let width = frame.size.width
+        let height = frame.size.height
         
         openView.frame = CGRectMake(
             width,
             0,
             width/2,
-            self.frame.size.height)
+            frame.size.height)
         
         dateLabel = UILabel(frame: CGRect(
             x: 0,
@@ -68,10 +62,9 @@ class GameCell: UICollectionViewCell {
         openView.layer.mask = mask
         
         openView.backgroundColor=UIColor.lightGrayColor()
-        self.addSubview(openView)
-        
+        addSubview(openView)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         isOpen = false
         super.init(coder: aDecoder)
