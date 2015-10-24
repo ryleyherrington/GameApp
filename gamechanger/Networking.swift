@@ -12,8 +12,6 @@ import Alamofire
 
 @objc class NetworkingProvider: NSObject
 {
-//    let SERVER_URL = "https://gamescraper-1037.appspot.com/upcoming/"
-//    let SERVER_URL = "https://gamersforecast-1094.appspot.com/games.json"
     let SERVER_URL = "http://gamerforecast.com/games.json"
     
     @objc override init() {
@@ -110,8 +108,10 @@ import Alamofire
                     //Save in core data now that we have the fields
                     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                     let managedContext = appDelegate.managedObjectContext
-                    let entity =  NSEntityDescription.entityForName("Game", inManagedObjectContext:managedContext)
-                    let game = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as! Game
+                    let gameEntity =  NSEntityDescription.entityForName("Game", inManagedObjectContext:managedContext)
+                    let platformEntity =  NSEntityDescription.entityForName("Platform", inManagedObjectContext:managedContext)
+                    
+                    let game = NSManagedObject(entity: gameEntity!, insertIntoManagedObjectContext: managedContext) as! Game
                     
                     game.setValue(name, forKey: "name")
                     game.setValue(lastUpdate, forKey: "lastUpdated")
@@ -120,6 +120,12 @@ import Alamofire
                     game.setValue(genre, forKey: "genre")
                     game.setValue(imageUrl, forKey: "imageUrl")
                     game.setValue(platformString, forKey: "platformString")
+                    
+                    for platform in platformSringArray {
+                        let platformObj = NSManagedObject(entity: platformEntity!, insertIntoManagedObjectContext: managedContext) as! Platform
+                        platformObj.platformName = platform
+                        game.addPlatformsObject(platformObj)
+                    }
                     
                     do {
                         try managedContext.save()

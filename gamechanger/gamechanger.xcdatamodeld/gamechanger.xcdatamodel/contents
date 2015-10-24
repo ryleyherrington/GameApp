@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Automatic">
-    <entity name="Game" representedClassName=".Game" syncable="YES">
+    <entity name="Game" representedClassName="Game" syncable="YES">
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
@@ -11,7 +11,7 @@
         <attribute name="releaseDate" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="platforms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Platform" syncable="YES"/>
     </entity>
-    <entity name="Platform" representedClassName=".Platform" syncable="YES">
+    <entity name="Platform" representedClassName="Platform" syncable="YES">
         <attribute name="platformName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>

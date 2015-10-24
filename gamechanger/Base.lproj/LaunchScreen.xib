@@ -11,37 +11,25 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="1lU-Bg-5b1">
-                    <rect key="frame" x="155" y="185" width="170" height="170"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gamers Forecast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGK-2s-pyS">
-                    <rect key="frame" x="8" y="134" width="464" height="33.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
-                    <color key="textColor" red="0.15686274510000001" green="0.4039215686" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.15686274509803921" green="0.40392156862745099" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="XGK-2s-pyS" firstAttribute="centerY" secondItem="1lU-Bg-5b1" secondAttribute="centerY" constant="-119.25" id="1Mt-pl-aDT"/>
-                <constraint firstItem="XGK-2s-pyS" firstAttribute="trailing" secondItem="1lU-Bg-5b1" secondAttribute="trailing" constant="147" id="Lbh-hv-qby"/>
-                <constraint firstItem="XGK-2s-pyS" firstAttribute="leading" secondItem="1lU-Bg-5b1" secondAttribute="leading" constant="-147" id="MSa-yk-7rM"/>
-                <constraint firstItem="1lU-Bg-5b1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="30" id="c37-TP-UXp"/>
-                <constraint firstItem="1lU-Bg-5b1" firstAttribute="top" secondItem="XGK-2s-pyS" secondAttribute="bottom" constant="8" id="d6c-1g-vFA"/>
-                <constraint firstItem="1lU-Bg-5b1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mgP-hf-7ar"/>
+                <constraint firstItem="XGK-2s-pyS" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="02t-WI-TRj"/>
+                <constraint firstItem="XGK-2s-pyS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7zm-8x-Y5D"/>
+                <constraint firstItem="XGK-2s-pyS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KYd-HD-mSM"/>
+                <constraint firstItem="XGK-2s-pyS" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="Os4-Ue-ySo"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="d6c-1g-vFA"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
-    <resources>
-        <image name="icon" width="170" height="170"/>
-    </resources>
 </document>

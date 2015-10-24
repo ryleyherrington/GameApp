@@ -9,6 +9,7 @@
 #import "NetworkHelper.h"
 #import "AppDelegate.h"
 #import "gamechanger-Swift.h"
+#import "Game.h"
 
 
 @implementation NetworkHelper

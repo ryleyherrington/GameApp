@@ -1,16 +1,16 @@
 //
-//  Platform.swift
+//  Game.m
 //  gamechanger
 //
-//  Created by Ryley Herrington on 10/20/15.
+//  Created by Ryley Herrington on 10/24/15.
 //  Copyright © 2015 Ryley Herrington. All rights reserved.
 //
 
-import Foundation
-import CoreData
+#import "Game.h"
+#import "Platform.h"
 
-class Platform: NSManagedObject {
+@implementation Game
 
 // Insert code here to add functionality to your managed object subclass
 
-}
+@end

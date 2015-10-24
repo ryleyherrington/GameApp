@@ -5,3 +5,5 @@
 #import "GameCollectionViewCell.h"
 #import "DefaultFlowLayout.h"
 #import <Parse/Parse.h>
+#import "Game.h"
+#import "Platform.h"
