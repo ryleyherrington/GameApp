@@ -2,12 +2,14 @@
 //  Platform.h
 //  gamechanger
 //
-//  Created by Ryley Herrington on 10/24/15.
+//  Created by Ryley Herrington on 10/25/15.
 //  Copyright © 2015 Ryley Herrington. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+
+@class Game;
 
 NS_ASSUME_NONNULL_BEGIN
 

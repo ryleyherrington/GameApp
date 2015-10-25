@@ -51,14 +51,55 @@ class GameCollectionViewController: UICollectionViewController {
         }
         collectionView?.reloadData()
     }
-   
+  
+    func filterArray()->NSArray {
+        var filterArr: [String] = []
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let ps4Filter = defaults.boolForKey("PS4")
+        let x1Filter = defaults.boolForKey("Xbox One")
+        let pcFilter = defaults.boolForKey("PC")
+        let ps3Filter = defaults.boolForKey("PS3")
+        let x360Filter = defaults.boolForKey("Xbox 360")
+        let wiiFilter = defaults.boolForKey("Wii")
+        
+        if ps4Filter {
+            filterArr.append("PS4")
+        }
+        if x1Filter {
+            filterArr.append("Xbox One")
+        }
+        if pcFilter {
+            filterArr.append("PC")
+        }
+        if ps3Filter {
+            filterArr.append("PS3")
+        }
+        if x360Filter {
+            filterArr.append("Xbox 360")
+        }
+        if wiiFilter {
+            filterArr.append("Wii")
+        }
+        
+        return filterArr
+    }
+    
     func getGamesWithFilter(filterString:NSString){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "Game")
-        //TODO: MAKE THIS WORK
-        //let resultPredicate = NSPredicate(format: "predicateString contains[c] %@", filterString)
-        //fetchRequest.predicate = resultPredicate
+        
+       
+//        var filterArray = self.filterArray()
+//        let resultPredicate = NSPredicate(format: "ALL platforms.platformName in %@", filterString)
+//        let predicate = NSPredicate(format: "ANY personToNick.nickName in %@", nameArray)
+        
+        let resultPredicate = NSPredicate(format: "ANY platforms.platformName in %@", filterArray())
+        fetchRequest.predicate = resultPredicate
+        
+        
+        
         
         do {
             let results =
@@ -84,6 +125,7 @@ class GameCollectionViewController: UICollectionViewController {
     
     func filterButtonTouched(sender: UIButton){
         print("TOUCHED: \(sender.titleLabel?.text)")
+        
         if sender.backgroundColor == UIColor.whiteColor() {
             sender.backgroundColor = UIColor.blackColor()
             sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
@@ -119,94 +161,39 @@ class GameCollectionViewController: UICollectionViewController {
 //            })
         }
     }
+
+    func createButtonWithName(name:NSString, frame:CGRect){
+//        let button = UIButton(frame: CGRectMake(width - width/3, 0, width/3, 50))
+        let button = UIButton(frame: frame)
+        
+        button.setTitle(name as String, forState: .Normal)
+        button.addTarget(self, action: "filterButtonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        let filter = NSUserDefaults.standardUserDefaults().boolForKey(name as String)
+        if (filter == true){
+            button.backgroundColor = UIColor.whiteColor()
+            button.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        } else {
+            button.backgroundColor = UIColor.blackColor()
+            button.titleLabel?.textColor = UIColor.whiteColor()
+        }
+        
+        filterView.addSubview(button)
+    }
     
     @IBAction func barButtonPressed(sender: AnyObject) {
         let width = self.view.frame.size.width
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let ps4Filter = defaults.boolForKey("PS4")
-        let x1Filter = defaults.boolForKey("XBOX ONE")
-        let pcFilter = defaults.boolForKey("PC")
-        let ps3Filter = defaults.boolForKey("PS3")
-        let x360Filter = defaults.boolForKey("XBOX 360")
-        let wiiFilter = defaults.boolForKey("WII")
-        
-        //row 1
-        let ps4 = UIButton(frame: CGRectMake(0, 0, width/3, 50))
-        let x1 = UIButton(frame: CGRectMake(width/3, 0, width/3, 50))
-        let pc = UIButton(frame: CGRectMake(width - width/3, 0, width/3, 50))
-        ps4.setTitle("PS4", forState: .Normal)
-        x1.setTitle("XBOX ONE", forState: .Normal)
-        pc.setTitle("PC", forState: .Normal)
-        if (ps4Filter == true){
-            ps4.backgroundColor = UIColor.whiteColor()
-            ps4.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        } else {
-            ps4.backgroundColor = UIColor.blackColor()
-            ps4.titleLabel?.textColor = UIColor.whiteColor()
-        }
-        if (x1Filter == true){
-            x1.backgroundColor = UIColor.whiteColor()
-            x1.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        } else {
-            x1.backgroundColor = UIColor.blackColor()
-            x1.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        }
-        if (pcFilter == true){
-            pc.backgroundColor = UIColor.whiteColor()
-            pc.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        } else {
-            pc.backgroundColor = UIColor.blackColor()
-            pc.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        }
-        
-        ps4.addTarget(self, action: "filterButtonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
-        x1.addTarget(self, action: "filterButtonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
-        pc.addTarget(self, action: "filterButtonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
 
+//        
+        //row 1
+        self.createButtonWithName("PS4", frame:CGRectMake(0, 0, width/3, 50))
+        self.createButtonWithName("Xbox One", frame:CGRectMake(width/3, 0, width/3, 50))
+        self.createButtonWithName("PC", frame:CGRectMake(width - width/3, 0, width/3, 50))
         
-        
-        //row 2
-        let ps3 = UIButton(frame: CGRectMake(0, 50, width/3, 50))
-        let x360 = UIButton(frame: CGRectMake(width/3, 50, width/3, 50))
-        let wii = UIButton(frame: CGRectMake(width - width/3, 50, width/3, 50))
-        ps3.setTitle("PS3", forState: .Normal)
-        x360.setTitle("XBOX 360", forState: .Normal)
-        wii.setTitle("WII", forState: .Normal)
-        
-        if (ps3Filter == true){
-            ps3.backgroundColor = UIColor.whiteColor()
-            //TODO: CHANGE THE LAST THREE TO CORRECT TEXT COLOR SEE ABOVE
-            ps3.titleLabel?.textColor = UIColor.blackColor()
-        } else {
-            ps3.backgroundColor = UIColor.blackColor()
-            ps3.titleLabel?.textColor = UIColor.whiteColor()
-        }
-        if (x360Filter == true){
-            x360.backgroundColor = UIColor.whiteColor()
-            x360.titleLabel?.textColor = UIColor.blackColor()
-        } else {
-            x360.backgroundColor = UIColor.blackColor()
-            x360.titleLabel?.textColor = UIColor.whiteColor()
-        }
-        if (wiiFilter == true){
-            wii.backgroundColor = UIColor.whiteColor()
-            wii.titleLabel?.textColor = UIColor.blackColor()
-        } else {
-            wii.backgroundColor = UIColor.blackColor()
-            wii.titleLabel?.textColor = UIColor.whiteColor()
-        }
-        
-        ps3.addTarget(self, action: "filterButtonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
-        x360.addTarget(self, action: "filterButtonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
-        wii.addTarget(self, action: "filterButtonTouched:", forControlEvents: UIControlEvents.TouchUpInside)
-       
-        filterView.addSubview(ps4)
-        filterView.addSubview(x1)
-        filterView.addSubview(wii)
-        filterView.addSubview(ps3)
-        filterView.addSubview(x360)
-        filterView.addSubview(pc)
+        self.createButtonWithName("PS3", frame:CGRectMake(0, 50, width/3, 50))
+        self.createButtonWithName("Xbox 360", frame:CGRectMake(width/3, 50, width/3, 50))
+        self.createButtonWithName("Wii", frame:CGRectMake(width - width/3, 50, width/3, 50))
         
         self.toggleFilterView()
     }

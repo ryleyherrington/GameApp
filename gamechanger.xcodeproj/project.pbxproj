@@ -17,10 +17,10 @@
 		735EF2EC1BA62015009D0923 /* DefaultFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2EB1BA62015009D0923 /* DefaultFlowLayout.m */; };
 		735EF2F01BA6224D009D0923 /* GameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2EE1BA6224D009D0923 /* GameCollectionViewCell.m */; };
 		735EF2F71BA63691009D0923 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2F61BA63691009D0923 /* NetworkHelper.m */; };
-		738F78711BDC0ABA00E2184E /* Game+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F786A1BDC0ABA00E2184E /* Game+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		738F78721BDC0ABA00E2184E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F786C1BDC0ABA00E2184E /* Game.m */; settings = {ASSET_TAGS = (); }; };
-		738F78731BDC0ABA00E2184E /* Platform+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F786E1BDC0ABA00E2184E /* Platform+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		738F78741BDC0ABA00E2184E /* Platform.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F78701BDC0ABA00E2184E /* Platform.m */; settings = {ASSET_TAGS = (); }; };
+		738F787D1BDD556E00E2184E /* Game+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F78761BDD556E00E2184E /* Game+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		738F787E1BDD556E00E2184E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F78781BDD556E00E2184E /* Game.m */; settings = {ASSET_TAGS = (); }; };
+		738F787F1BDD556E00E2184E /* Platform+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F787A1BDD556E00E2184E /* Platform+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		738F78801BDD556E00E2184E /* Platform.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F787C1BDD556E00E2184E /* Platform.m */; settings = {ASSET_TAGS = (); }; };
 		73B57CAA1BCAE235003BC4C9 /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B57CA91BCAE235003BC4C9 /* GameCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		73F382551BD6B87B00365BCA /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F382541BD6B87B00365BCA /* GameCell.swift */; settings = {ASSET_TAGS = (); }; };
 		73F3825A1BD9C8B500365BCA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F382581BD9C8B500365BCA /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
@@ -71,14 +71,14 @@
 		735EF2EE1BA6224D009D0923 /* GameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCollectionViewCell.m; sourceTree = "<group>"; };
 		735EF2F51BA63691009D0923 /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
 		735EF2F61BA63691009D0923 /* NetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
-		738F78691BDC0ABA00E2184E /* Game+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Game+CoreDataProperties.h"; sourceTree = "<group>"; };
-		738F786A1BDC0ABA00E2184E /* Game+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Game+CoreDataProperties.m"; sourceTree = "<group>"; };
-		738F786B1BDC0ABA00E2184E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
-		738F786C1BDC0ABA00E2184E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
-		738F786D1BDC0ABA00E2184E /* Platform+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Platform+CoreDataProperties.h"; sourceTree = "<group>"; };
-		738F786E1BDC0ABA00E2184E /* Platform+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Platform+CoreDataProperties.m"; sourceTree = "<group>"; };
-		738F786F1BDC0ABA00E2184E /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
-		738F78701BDC0ABA00E2184E /* Platform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Platform.m; sourceTree = "<group>"; };
+		738F78751BDD556E00E2184E /* Game+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Game+CoreDataProperties.h"; sourceTree = "<group>"; };
+		738F78761BDD556E00E2184E /* Game+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Game+CoreDataProperties.m"; sourceTree = "<group>"; };
+		738F78771BDD556E00E2184E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		738F78781BDD556E00E2184E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		738F78791BDD556E00E2184E /* Platform+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Platform+CoreDataProperties.h"; sourceTree = "<group>"; };
+		738F787A1BDD556E00E2184E /* Platform+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Platform+CoreDataProperties.m"; sourceTree = "<group>"; };
+		738F787B1BDD556E00E2184E /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
+		738F787C1BDD556E00E2184E /* Platform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Platform.m; sourceTree = "<group>"; };
 		73B57CA91BCAE235003BC4C9 /* GameCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionViewController.swift; sourceTree = "<group>"; };
 		73F382521BD6A52200365BCA /* gamechanger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gamechanger-Bridging-Header.h"; sourceTree = "<group>"; };
 		73F382541BD6B87B00365BCA /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
@@ -238,14 +238,14 @@
 			children = (
 				BE8536371BC98A3700572D01 /* Games2.swift */,
 				735EF2C51BA60257009D0923 /* gamechanger.xcdatamodeld */,
-				738F78691BDC0ABA00E2184E /* Game+CoreDataProperties.h */,
-				738F786A1BDC0ABA00E2184E /* Game+CoreDataProperties.m */,
-				738F786B1BDC0ABA00E2184E /* Game.h */,
-				738F786C1BDC0ABA00E2184E /* Game.m */,
-				738F786D1BDC0ABA00E2184E /* Platform+CoreDataProperties.h */,
-				738F786E1BDC0ABA00E2184E /* Platform+CoreDataProperties.m */,
-				738F786F1BDC0ABA00E2184E /* Platform.h */,
-				738F78701BDC0ABA00E2184E /* Platform.m */,
+				738F78751BDD556E00E2184E /* Game+CoreDataProperties.h */,
+				738F78761BDD556E00E2184E /* Game+CoreDataProperties.m */,
+				738F78771BDD556E00E2184E /* Game.h */,
+				738F78781BDD556E00E2184E /* Game.m */,
+				738F78791BDD556E00E2184E /* Platform+CoreDataProperties.h */,
+				738F787A1BDD556E00E2184E /* Platform+CoreDataProperties.m */,
+				738F787B1BDD556E00E2184E /* Platform.h */,
+				738F787C1BDD556E00E2184E /* Platform.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -425,13 +425,13 @@
 			files = (
 				735EF2F01BA6224D009D0923 /* GameCollectionViewCell.m in Sources */,
 				BE85363A1BC98A3E00572D01 /* Networking.swift in Sources */,
-				738F78741BDC0ABA00E2184E /* Platform.m in Sources */,
+				738F78801BDD556E00E2184E /* Platform.m in Sources */,
 				735EF2C41BA60257009D0923 /* AppDelegate.m in Sources */,
-				738F78721BDC0ABA00E2184E /* Game.m in Sources */,
-				738F78711BDC0ABA00E2184E /* Game+CoreDataProperties.m in Sources */,
+				738F787E1BDD556E00E2184E /* Game.m in Sources */,
+				738F787D1BDD556E00E2184E /* Game+CoreDataProperties.m in Sources */,
 				73B57CAA1BCAE235003BC4C9 /* GameCollectionViewController.swift in Sources */,
 				735EF2EC1BA62015009D0923 /* DefaultFlowLayout.m in Sources */,
-				738F78731BDC0ABA00E2184E /* Platform+CoreDataProperties.m in Sources */,
+				738F787F1BDD556E00E2184E /* Platform+CoreDataProperties.m in Sources */,
 				BE8536381BC98A3700572D01 /* Games2.swift in Sources */,
 				735EF2C11BA60257009D0923 /* main.m in Sources */,
 				735EF2F71BA63691009D0923 /* NetworkHelper.m in Sources */,
