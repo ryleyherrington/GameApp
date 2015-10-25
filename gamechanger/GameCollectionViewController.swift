@@ -12,6 +12,7 @@ import Parse
 class GameCollectionViewController: UICollectionViewController {
     var games:[Game] = []
     var filterView:UIView = UIView()
+    var emptyView:UILabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +20,15 @@ class GameCollectionViewController: UICollectionViewController {
         navigationController?.hidesBarsOnSwipe = true
         self.title = "Gamers Forecast"
         
+        self.createFilterView()
+        self.createEmptyView()
+        
         let network = NetworkingProvider()
         network.GetGamesFromServerWithCompletion { (pGames) -> Void in
             self.games = pGames as! [Game]
             self.getGames()
         }
         
-        self.createFilterView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,6 +41,9 @@ class GameCollectionViewController: UICollectionViewController {
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "Game")
         
+        let resultPredicate = NSPredicate(format: "ANY platforms.platformName in %@", filterArray())
+        fetchRequest.predicate = resultPredicate
+        
         do {
             let results =
             try managedContext.executeFetchRequest(fetchRequest)
@@ -46,12 +52,16 @@ class GameCollectionViewController: UICollectionViewController {
             print("Could not fetch \(error), \(error.userInfo)")
         }
         
-        for g in games {
-            games.append(g)
-        }
         collectionView?.reloadData()
+
+        if games.count == 0 {
+           self.emptyView.hidden = false
+        } else {
+            self.emptyView.hidden = true
+        }
     }
-  
+ 
+    
     func filterArray()->NSArray {
         var filterArr: [String] = []
         
@@ -81,38 +91,19 @@ class GameCollectionViewController: UICollectionViewController {
         if wiiFilter {
             filterArr.append("Wii")
         }
+       
+        let date = NSDate()
+        let outFormatter = NSDateFormatter()
+        outFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        outFormatter.dateFormat = "hh:mm"
+        
+        let dimensions = [
+            "time" : outFormatter.stringFromDate(date),
+            "filterValues" : filterArr.description
+        ]
+        PFAnalytics.trackEvent("filtered", dimensions: dimensions)
         
         return filterArr
-    }
-    
-    func getGamesWithFilter(filterString:NSString){
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: "Game")
-        
-       
-//        var filterArray = self.filterArray()
-//        let resultPredicate = NSPredicate(format: "ALL platforms.platformName in %@", filterString)
-//        let predicate = NSPredicate(format: "ANY personToNick.nickName in %@", nameArray)
-        
-        let resultPredicate = NSPredicate(format: "ANY platforms.platformName in %@", filterArray())
-        fetchRequest.predicate = resultPredicate
-        
-        
-        
-        
-        do {
-            let results =
-            try managedContext.executeFetchRequest(fetchRequest)
-            games = results as! [Game]
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-        
-        for g in games {
-            games.append(g)
-        }
-        collectionView?.reloadData()
     }
     
     func createFilterView() {
@@ -122,6 +113,20 @@ class GameCollectionViewController: UICollectionViewController {
         filterView.hidden = true
         self.view?.addSubview(filterView)
     }
+    
+    func createEmptyView() {
+        let width = self.view.frame.size.width
+        emptyView = UILabel(frame: CGRectMake(20, 200, width - 40, 100))
+        emptyView.backgroundColor = UIColor.darkGrayColor()
+        emptyView.text = "Choose a platform to look for, or choose more than one to expand your search!"
+        emptyView.font = UIFont (name: "HelveticaNeue-Light", size: 18)
+        emptyView.numberOfLines = 0
+        emptyView.textAlignment = .Center
+        emptyView.textColor = UIColor.whiteColor()
+        emptyView.hidden = true
+        self.collectionView?.addSubview(emptyView)
+    }
+    
     
     func filterButtonTouched(sender: UIButton){
         print("TOUCHED: \(sender.titleLabel?.text)")
@@ -136,7 +141,7 @@ class GameCollectionViewController: UICollectionViewController {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: (sender.titleLabel?.text)!)
         }
         self.toggleFilterView()
-        self.getGamesWithFilter((sender.titleLabel?.text)!)
+        self.getGames()
     }
   
     func toggleFilterView(){
@@ -154,16 +159,11 @@ class GameCollectionViewController: UICollectionViewController {
                 }, completion: { (finished) -> Void in
                     self.filterView.hidden = true
             })
-//            UIView.animateWithDuration(0.2, animations: {
-//                self.filterView.frame = CGRectMake(0, -100, width, 100)
-//                }, completion: { finished in
-//                    self.filterView.hidden = true
-//            })
+
         }
     }
 
     func createButtonWithName(name:NSString, frame:CGRect){
-//        let button = UIButton(frame: CGRectMake(width - width/3, 0, width/3, 50))
         let button = UIButton(frame: frame)
         
         button.setTitle(name as String, forState: .Normal)
@@ -184,13 +184,12 @@ class GameCollectionViewController: UICollectionViewController {
     @IBAction func barButtonPressed(sender: AnyObject) {
         let width = self.view.frame.size.width
         
-
-//        
         //row 1
         self.createButtonWithName("PS4", frame:CGRectMake(0, 0, width/3, 50))
         self.createButtonWithName("Xbox One", frame:CGRectMake(width/3, 0, width/3, 50))
         self.createButtonWithName("PC", frame:CGRectMake(width - width/3, 0, width/3, 50))
         
+        //row 2
         self.createButtonWithName("PS3", frame:CGRectMake(0, 50, width/3, 50))
         self.createButtonWithName("Xbox 360", frame:CGRectMake(width/3, 50, width/3, 50))
         self.createButtonWithName("Wii", frame:CGRectMake(width - width/3, 50, width/3, 50))
@@ -285,7 +284,7 @@ class GameCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
         let cell : GameCell = collectionView.cellForItemAtIndexPath(indexPath)! as! GameCell
-        //let game = games[indexPath.row]
+        let game = games[indexPath.row]
         
         print("cell.isOpen: \(cell.isOpen)")
         
@@ -304,20 +303,19 @@ class GameCollectionViewController: UICollectionViewController {
                 cell.openView.frame = CGRectMake(width-width/2, 0, width/2, height)
                 }, completion: { (done) -> Void in
                     cell.isOpen=true
+                    let date = NSDate()
+                    let outFormatter = NSDateFormatter()
+                    outFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+                    outFormatter.dateFormat = "hh:mm"
                     
-                    //                    let date = NSDate()
-                    //                    let outFormatter = NSDateFormatter()
-                    //                    outFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-                    //                    outFormatter.dateFormat = "hh:mm"
+                    let dimensions = [
+                        //I'd like to have user id here sometime... twitter integration or something?
+                        "time" : outFormatter.stringFromDate(date),
+                        "game" : game.name!
+                    ]
                     
-                    //                    let dimensions = [
-                    //                        //I'd like to have user id here sometime... twitter integration or something?
-                    //                        "time" : outFormatter.stringFromDate(date),
-                    //                        "game" : game.name!
-                    //                    ]
-                    //
-                    //                    // Send the dimensions to Parse along with the 'read' event
-                    //                    PFAnalytics.trackEvent("opened", dimensions: dimensions)
+                    // Send the dimensions to Parse along with the 'read' event
+                    PFAnalytics.trackEvent("opened", dimensions: dimensions)
             })
         }
     }

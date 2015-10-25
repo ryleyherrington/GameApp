@@ -16,7 +16,6 @@
 		735EF2DE1BA60257009D0923 /* gamechangerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2DD1BA60257009D0923 /* gamechangerTests.m */; };
 		735EF2EC1BA62015009D0923 /* DefaultFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2EB1BA62015009D0923 /* DefaultFlowLayout.m */; };
 		735EF2F01BA6224D009D0923 /* GameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2EE1BA6224D009D0923 /* GameCollectionViewCell.m */; };
-		735EF2F71BA63691009D0923 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 735EF2F61BA63691009D0923 /* NetworkHelper.m */; };
 		738F787D1BDD556E00E2184E /* Game+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F78761BDD556E00E2184E /* Game+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		738F787E1BDD556E00E2184E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F78781BDD556E00E2184E /* Game.m */; settings = {ASSET_TAGS = (); }; };
 		738F787F1BDD556E00E2184E /* Platform+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 738F787A1BDD556E00E2184E /* Platform+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
@@ -69,8 +68,6 @@
 		735EF2EB1BA62015009D0923 /* DefaultFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultFlowLayout.m; sourceTree = "<group>"; };
 		735EF2ED1BA6224C009D0923 /* GameCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCollectionViewCell.h; sourceTree = "<group>"; };
 		735EF2EE1BA6224D009D0923 /* GameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCollectionViewCell.m; sourceTree = "<group>"; };
-		735EF2F51BA63691009D0923 /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
-		735EF2F61BA63691009D0923 /* NetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
 		738F78751BDD556E00E2184E /* Game+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Game+CoreDataProperties.h"; sourceTree = "<group>"; };
 		738F78761BDD556E00E2184E /* Game+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Game+CoreDataProperties.m"; sourceTree = "<group>"; };
 		738F78771BDD556E00E2184E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
@@ -226,8 +223,6 @@
 		BE8536341BC98A0D00572D01 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				735EF2F51BA63691009D0923 /* NetworkHelper.h */,
-				735EF2F61BA63691009D0923 /* NetworkHelper.m */,
 				BE8536391BC98A3E00572D01 /* Networking.swift */,
 			);
 			name = Networking;
@@ -434,7 +429,6 @@
 				738F787F1BDD556E00E2184E /* Platform+CoreDataProperties.m in Sources */,
 				BE8536381BC98A3700572D01 /* Games2.swift in Sources */,
 				735EF2C11BA60257009D0923 /* main.m in Sources */,
-				735EF2F71BA63691009D0923 /* NetworkHelper.m in Sources */,
 				735EF2C71BA60257009D0923 /* gamechanger.xcdatamodeld in Sources */,
 				73F382551BD6B87B00365BCA /* GameCell.swift in Sources */,
 			);

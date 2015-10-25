@@ -25,6 +25,17 @@
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
     
+        NSDictionary* defaults = @{@"PS4":@true,@"Xbox One":@true,@"PC":@true,@"PS3":@false,@"Xbox 360":@false,@"Wii":@false};
+    //NSMutableDictionary *defaults = [NSMutableDictionary new];
+//    [defaults setObject:true forKey:@"PS4"];
+//    [defaults setObject:true forKey:@"Xbox One"];
+//    [defaults setObject:true forKey:@"PC"];
+//    [defaults setObject:true forKey:@"PS3"];
+//    [defaults setObject:true forKey:@"Xbox 360"];
+//    [defaults setObject:true forKey:@"Wii"];
+//
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+
     [Parse setApplicationId:@"c5oPSJIP1Zkx0VhjdLu0dkjnFhqOZcke8NgGpSjS" clientKey:@"BU01xrIKbYvPBRCltBx8e1B1Dl5hJfjFVHg22Tbl"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     

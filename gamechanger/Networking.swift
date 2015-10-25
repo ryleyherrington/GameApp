@@ -33,10 +33,7 @@ import Alamofire
             print("Could not fetch \(error), \(error.userInfo)")
         }
         
-        for g in games {
-            games.append(g)
-        }
-        
+        //now get ones from server
         Alamofire.request(.GET, SERVER_URL).responseJSON {
             response in
 
@@ -135,15 +132,7 @@ import Alamofire
                         print("Could not save \(error), \(error.userInfo)")
                     }
                 }
-                
-                //This doesn't work because it's just a temp object...
-                //games.append(Games(gameName: name, gameReleaseDate: releaseDate, gameLastUpdated: lastUpdate, gameGenre: genre, gamePlatforms: platformSringArray, gameColor: color))
-                
             }
-            
-            print ("JSON: \(games)")
-            
-            print ("RYLEY COUNT: \(games.count)")
             completionHandler(pGames: games)
         }
     }
