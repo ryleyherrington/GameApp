@@ -33,7 +33,6 @@
 		73F382691BD9CCB300365BCA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F382681BD9CCB300365BCA /* SystemConfiguration.framework */; };
 		73F3826B1BD9CCBD00365BCA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3826A1BD9CCBD00365BCA /* libz.tbd */; };
 		73F3826D1BD9CCC500365BCA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3826C1BD9CCC500365BCA /* libsqlite3.tbd */; };
-		73F3826F1BD9CCCB00365BCA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3826E1BD9CCCB00365BCA /* StoreKit.framework */; };
 		BCD00F1416F819E7B280A4CC /* Pods_gamechanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC3EF48E6CBF067ACCD7343 /* Pods_gamechanger.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BE8536381BC98A3700572D01 /* Games2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8536371BC98A3700572D01 /* Games2.swift */; settings = {ASSET_TAGS = (); }; };
 		BE85363A1BC98A3E00572D01 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8536391BC98A3E00572D01 /* Networking.swift */; settings = {ASSET_TAGS = (); }; };
@@ -101,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73F3826F1BD9CCCB00365BCA /* StoreKit.framework in Frameworks */,
 				73F3826D1BD9CCC500365BCA /* libsqlite3.tbd in Frameworks */,
 				73F3826B1BD9CCBD00365BCA /* libz.tbd in Frameworks */,
 				73F382691BD9CCB300365BCA /* SystemConfiguration.framework in Frameworks */,
@@ -509,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -546,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -559,7 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ryley Herrington (RFFBF78KN3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -581,7 +579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ryley Herrington (RFFBF78KN3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
