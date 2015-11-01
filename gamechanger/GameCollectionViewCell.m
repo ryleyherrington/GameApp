@@ -23,14 +23,14 @@
         self.backgroundColor = [UIColor grayColor];
         self.isOpen = NO;
         
-        self.title = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0, frame.size.width - 20, 44.f)];
-        self.title.textAlignment = NSTextAlignmentLeft;
-        self.title.textColor = [UIColor whiteColor];
-        self.title.backgroundColor = [UIColor clearColor];
-        self.title.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18.f];
-        self.title.numberOfLines = 1;
-        
-        [self addSubview:self.title];;
+//        self.title = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0, frame.size.width - 20, 44.f)];
+//        self.title.textAlignment = NSTextAlignmentLeft;
+//        self.title.textColor = [UIColor whiteColor];
+//        self.title.backgroundColor = [UIColor clearColor];
+//        self.title.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18.f];
+//        self.title.numberOfLines = 1;
+//        
+//        [self addSubview:self.title];;
         
         self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -41,13 +41,15 @@
         
 
         CGFloat width = self.frame.size.width/2;
+        
         _dateView = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width, 0, width, self.frame.size.height)];
         _dateView.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.f];
         [_dateView setNumberOfLines:0];
         [_dateView setLineBreakMode:NSLineBreakByWordWrapping];
         _dateView.textAlignment = NSTextAlignmentRight;
-        
+       
         [self addSubview:_dateView];
+        
                 // Build a triangular path
         UIBezierPath *path = [UIBezierPath new];
         [path moveToPoint:(CGPoint){50, 0}];

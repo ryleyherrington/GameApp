@@ -90,7 +90,7 @@ import Alamofire
                 }
                 
                 for platform in platforms {
-                    platformString = platformString + "," + platform.stringValue
+                    platformString = platformString + ", " + platform.stringValue
                     platformSringArray.append(platform.stringValue)
                 }
                 

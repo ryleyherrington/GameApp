@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iNm-ZQ-Prh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iNm-ZQ-Prh">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -13,6 +12,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JsN-ru-eaa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WG5-qN-YU1">
                             <size key="itemSize" width="600" height="222"/>
@@ -30,33 +30,44 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jo3-RG-SSb">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="222"/>
+                                            <animations/>
                                         </imageView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mae-FL-hcc">
-                                            <rect key="frame" x="500" y="0.0" width="285" height="222"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mae-FL-hcc">
+                                            <rect key="frame" x="428" y="0.0" width="442" height="222"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW2-Ct-haM">
-                                                    <rect key="frame" x="8" y="129" width="225" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRc-hP-DTS">
-                                                    <rect key="frame" x="8" y="68" width="225" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRc-hP-DTS">
+                                                    <rect key="frame" x="40" y="38" width="160" height="145"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="RUA-da-WiX"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="WRc-hP-DTS" firstAttribute="top" secondItem="mae-FL-hcc" secondAttribute="top" constant="38" id="56O-pN-4Pt"/>
+                                                <constraint firstItem="WRc-hP-DTS" firstAttribute="leading" secondItem="mae-FL-hcc" secondAttribute="leading" constant="40" id="Tqh-Bi-5FM"/>
+                                                <constraint firstAttribute="bottom" secondItem="WRc-hP-DTS" secondAttribute="bottom" constant="39" id="fbo-AM-SNv"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <animations/>
                                 <constraints>
+                                    <constraint firstItem="mae-FL-hcc" firstAttribute="leading" secondItem="opG-77-de2" secondAttribute="leading" constant="428" id="4hA-rr-cCA"/>
+                                    <constraint firstItem="mae-FL-hcc" firstAttribute="bottom" secondItem="jo3-RG-SSb" secondAttribute="bottom" id="DJl-Wl-GXi"/>
                                     <constraint firstItem="jo3-RG-SSb" firstAttribute="leading" secondItem="opG-77-de2" secondAttribute="leadingMargin" constant="-8" id="Mv3-gx-faq"/>
                                     <constraint firstItem="jo3-RG-SSb" firstAttribute="width" secondItem="opG-77-de2" secondAttribute="width" id="TvP-u1-WYR"/>
+                                    <constraint firstAttribute="trailing" secondItem="mae-FL-hcc" secondAttribute="trailing" constant="-270" id="a8t-vc-hyg"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="jo3-RG-SSb" secondAttribute="bottom" constant="-8" id="blF-Se-ogD"/>
                                     <constraint firstItem="jo3-RG-SSb" firstAttribute="height" secondItem="opG-77-de2" secondAttribute="height" id="fz0-Hd-OML"/>
+                                    <constraint firstItem="mae-FL-hcc" firstAttribute="top" secondItem="jo3-RG-SSb" secondAttribute="top" id="m81-cL-4DP"/>
                                     <constraint firstItem="jo3-RG-SSb" firstAttribute="top" secondItem="opG-77-de2" secondAttribute="topMargin" constant="-8" id="v3p-fg-ZxI"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="jo3-RG-SSb" secondAttribute="trailing" constant="-8" id="wJY-0O-sGj"/>
                                 </constraints>
@@ -64,7 +75,6 @@
                                     <outlet property="dateLabel" destination="WRc-hP-DTS" id="FbE-Nr-vu3"/>
                                     <outlet property="imageView" destination="jo3-RG-SSb" id="UY8-b0-rpr"/>
                                     <outlet property="openView" destination="mae-FL-hcc" id="O01-I6-F8F"/>
-                                    <outlet property="platforms" destination="bW2-Ct-haM" id="Ly0-yt-IHI"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -94,6 +104,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fuK-mB-JTd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

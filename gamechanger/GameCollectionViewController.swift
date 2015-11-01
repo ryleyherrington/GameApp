@@ -23,6 +23,7 @@ class GameCollectionViewController: UICollectionViewController {
         self.createFilterView()
         self.createEmptyView()
         
+
         let network = NetworkingProvider()
         network.GetGamesFromServerWithCompletion { (pGames) -> Void in
             self.games = pGames as! [Game]
@@ -104,6 +105,18 @@ class GameCollectionViewController: UICollectionViewController {
         PFAnalytics.trackEvent("filtered", dimensions: dimensions)
         
         return filterArr
+    }
+    
+    func dateFromString(date: String) -> String {
+        let dateString = date.stringByReplacingOccurrencesOfString(",", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        let df = NSDateFormatter()
+        df.dateFormat = "MMMM-dd-yyyy"
+        let releaseDate = df.dateFromString(dateString)
+        
+        let components = NSCalendar.currentCalendar().components(.Day, fromDate: NSDate(), toDate: releaseDate!, options: [])
+        
+        return "\(components.day)"
     }
     
     func createFilterView() {
@@ -231,16 +244,39 @@ class GameCollectionViewController: UICollectionViewController {
         let height = cell.frame.size.height;
         
         cell.imageView.image = UIImage(named: "placeholder")
-        cell.openView.frame = CGRectMake(width, 0, width/2, height)
-        cell.dateLabel.text = game.valueForKey("releaseDate") as? String
+        cell.openView.frame = CGRectMake(width, 0, width * 2/3, height)
+        
         var platforms = game.valueForKey("platformString") as? String
         if (platforms!.hasPrefix(",")) {
             platforms = String(platforms!.characters.dropFirst())
         }
-        cell.platforms.text = platforms
+        
+        let releaseDate = game.valueForKey("releaseDate") as? String
+        var countdown = String()
+        if (releaseDate?.hasPrefix("Q") == false &&
+            releaseDate?.hasPrefix("T") == false) { //Q4, TBA
+            countdown = dateFromString(releaseDate!) + " days"
+        }
+        
+        cell.dateLabel.frame = CGRectMake(30,10,cell.openView.frame.size.width-30,cell.openView.frame.size.height)
+        cell.dateLabel.text = releaseDate! + "\n" + platforms! + "\n" + countdown
         
         let color = game.valueForKey("color") as? String
-        cell.openView.backgroundColor = hexStringToUIColor(color!)
+        if color == "#ff4793" || color == "#ffb347" || color == "#4793ff" || color == "#47ffb3" || color == nil{ //This isn't perfect... modding only goes so far.
+            if indexPath.row == 0 {
+                cell.openView.backgroundColor = hexStringToUIColor("#ff4793") //green
+            } else if indexPath.row % 4 == 0 {
+                cell.openView.backgroundColor = hexStringToUIColor("#ff4793") //pink
+            } else if indexPath.row % 3 == 0 {
+                cell.openView.backgroundColor = hexStringToUIColor("#ffb347") //orange
+            } else if indexPath.row % 2 == 0  && indexPath.row % 4 != 0{
+                cell.openView.backgroundColor = hexStringToUIColor("#4793ff") //blue
+            } else {
+                cell.openView.backgroundColor = hexStringToUIColor("#47ffb3") //green
+            }
+        } else {
+            cell.openView.backgroundColor = hexStringToUIColor(color!)
+        }
         
         let path = UIBezierPath()
         path.moveToPoint(CGPointMake(50, 0))
@@ -286,21 +322,18 @@ class GameCollectionViewController: UICollectionViewController {
         let cell : GameCell = collectionView.cellForItemAtIndexPath(indexPath)! as! GameCell
         let game = games[indexPath.row]
         
-        print("cell.isOpen: \(cell.isOpen)")
-        
         let width = cell.frame.size.width;
         let height = cell.frame.size.height;
         
-        
-        if (cell.isOpen != false){
+        if (cell.isOpen != false){ // close it
             UIView.animateWithDuration(0.3, animations: { () -> Void in
-                cell.openView.frame = CGRectMake(width, 0, width/2, height)
+                cell.openView.frame = CGRectMake(width, 0, width * 2/3, height)
                 }, completion: {(done) -> Void in
                     cell.isOpen = false;
             })
-        } else {
+        } else { //open it
             UIView.animateWithDuration(0.3, animations: { () -> Void in
-                cell.openView.frame = CGRectMake(width-width/2, 0, width/2, height)
+                cell.openView.frame = CGRectMake(width-width * 2/3, 0, width * 2/3, height)
                 }, completion: { (done) -> Void in
                     cell.isOpen=true
                     let date = NSDate()
@@ -309,7 +342,6 @@ class GameCollectionViewController: UICollectionViewController {
                     outFormatter.dateFormat = "hh:mm"
                     
                     let dimensions = [
-                        //I'd like to have user id here sometime... twitter integration or something?
                         "time" : outFormatter.stringFromDate(date),
                         "game" : game.name!
                     ]

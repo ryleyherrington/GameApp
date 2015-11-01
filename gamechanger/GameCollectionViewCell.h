@@ -11,7 +11,6 @@
 
 @interface GameCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) UILabel* title;
 @property (nonatomic, strong) UIImageView* imageView;
 @property (nonatomic, strong) UILabel* dateView;
 @property (nonatomic, assign) BOOL isOpen;

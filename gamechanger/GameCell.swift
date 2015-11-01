@@ -13,7 +13,6 @@ class GameCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var openView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var platforms: UILabel!
     
     var isOpen:Bool
     
