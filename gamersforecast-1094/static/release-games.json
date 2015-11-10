@@ -1,0 +1,379 @@
+{
+  "upcoming": [
+{
+ "genre":"Adventure",
+ "image_url":"http://i.imgur.com/H35P5jP.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Tales from the Borderlands",
+ "release_date":"October 20, 2015",
+ "color":"#ff4793",
+ "platforms":["PS4", "Xbox One", "PC" ]
+	},
+{
+ "genre":"Music",
+ "image_url":"http://i.imgur.com/I3Hh3Ov.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Just Dance 2016",
+ "release_date":"October 20, 2015",
+ "color":"#ffb347",
+ "platforms":["PS4",
+ 			"Xbox One"
+ 			]
+	},
+{
+ "genre":"Music",
+ "image_url":"http://i.imgur.com/ixy52eI.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Guitar Hero Live",
+ "release_date":"October 20, 2015",
+ "color":"#47ffb3",
+ "platforms":["PS4",
+ 			"Xbox One"]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/mEK85ph.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Assassin's Creed Syndicate",
+ "release_date":"October 23, 2015",
+ "color":"#4793ff",
+ "platforms":["PS4",
+ 			"Xbox One"
+ 			]
+	},
+{
+ "genre":"Wrestling",
+ "image_url":"http://i.imgur.com/QWIu2VY.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"WWE 2K16",
+ "release_date":"October 27, 2015",
+ "color":"#ff4793",
+ "platforms":["PS4",
+ 			"Xbox One"
+ 			]
+	},
+{
+ "genre":"Racing",
+ "image_url":"http://i.imgur.com/hoOVng5.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Need for Speed",
+ "release_date":"November 3, 2015",
+ "color":"#ffb347",
+ "platforms":["PS4",
+ 			"Xbox One"
+ 			]
+	},
+{
+ "genre":"Shooter",
+ "image_url":"http://i.imgur.com/N6dSJ4z.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Call of Duty: Black Ops III",
+ "release_date":"November 6, 2015",
+ "color":"#47ffb3",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"RPG",
+ "image_url":"http://i.imgur.com/JoroLIb.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Fallout 4",
+ "release_date":"November 10, 2015",
+ "color":"#4793ff",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/qSciszi.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Star Wars Battlefront",
+ "release_date":"November 17, 2015",
+ "color":"#ff4793",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/3GhwtvQ.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Deadpool",
+ "release_date":"November 17, 2015",
+ "color":"#ffb347",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Shooter",
+ "image_url":"http://i.imgur.com/Og8NRlf.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Tom Clancy's Rainbow Six Siege",
+ "release_date":"December 1, 2015",
+ "color":"#47ffb3",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/Wl0U6zl.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Just Cause 3",
+ "release_date":"December 1, 2015",
+ "color":"#4793ff",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/6eaIQ28.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Bloodbourne: The Old Hunters",
+ "release_date":"December 31, 2015",
+ "color":"#ff4793",
+ "platforms":["PS4"]
+	},
+{
+ "genre":"Adventure",
+ "image_url":"http://i.imgur.com/Bm9LQMJ.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"No Man's Sky",
+ "release_date":"December 31, 2016",
+ "color":"#ffb347",
+ "platforms":["PS4"]
+	},
+{
+ "genre":"Adventure",
+ "image_url":"http://i.imgur.com/TNBB5Ul.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Minecraft Story Mode",
+ "release_date":"October 27, 2015",
+ "color":"#47ffb3",
+ "platforms":["Xbox One"]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/EWV6WRn.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Rise of the Tomb Raider",
+ "release_date":"November 10, 2015",
+ "color":"#4793ff",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"RPG",
+ "image_url":"http://i.imgur.com/d1Nh3so.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Fable Legends",
+ "release_date":"December 31, 2015",
+ "color":"#ff4793",
+ "platforms":["Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Shooter",
+ "image_url":"http://i.imgur.com/q68lHje.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Halo Guardians",
+ "release_date":"October 27, 2015",
+ "color":"#ffb347",
+ "platforms":["Xbox One"]
+	},
+{
+ "genre":"Adventure",
+ "image_url":"http://i.imgur.com/2smvADr.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Life is Strange",
+ "release_date":"October 20, 2015",
+ "color":"#47ffb3",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"RTS",
+ "image_url":"http://i.imgur.com/8aJsAxP.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"StarCraft II: Legacy of the Void",
+ "release_date":"November 10, 2015",
+ "color":"#4793ff",
+ "platforms":["PC"]
+	},
+{
+ "genre":"Shooter",
+ "image_url":"http://i.imgur.com/ieOLAjg.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Overwatch",
+ "release_date":"December 31, 2016",
+ "color":"#ff4793",
+ "platforms":["PC"]
+	},
+{
+ "genre":"Adventure",
+ "image_url":"http://i.imgur.com/ps4u8fe.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Scalebound",
+ "release_date":"December 31, 2016",
+ "color":"#ffb347",
+ "platforms":["Xbox One"]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/15wu0uT.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Final Fantasy XV",
+ "release_date":"December 31, 2016",
+ "color":"#47ffb3",
+ "platforms":["PS4",
+ 			"Xbox One"
+ 			]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/uHBA1Ki.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Crackdown 3",
+ "release_date":"September 30, 2016",
+ "color":"#4793ff",
+ "platforms":["Xbox One"]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/mxS2v1f.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Quantum Break",
+ "release_date":"April 5, 2016",
+ "color":"#ff4793",
+ "platforms":["Xbox One"]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/qOSqI0s.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Dark Souls III",
+ "release_date":"April 30, 2016",
+ "color":"#ffb347",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre": "platformer",
+ "image_url":"http://i.imgur.com/w3kye3k.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"The Last Guardian",
+ "release_date":"December 31, 2016",
+ "color":"#47ffb3",
+ "platforms":["PS4"]
+	},
+{
+ "genre":"Shooter",
+ "image_url":"http://i.imgur.com/uOUjWQZ.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Homefront: The Revolution",
+ "release_date":"June 30, 2016",
+ "color":"#4793ff",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Shooter",
+ "image_url":"http://i.imgur.com/8ubttoD.jpg?1",
+ "last_updated":"October 14, 2015",
+ "name":"Tom Clancy's The Division",
+ "release_date":"March 8, 2016",
+ "color":"#ff4793",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/Kv4BzTH.jpg",
+ "last_updated":"October 14, 2015",
+ "name":"Kingdom Hearts III",
+ "release_date":"September 30, 2016",
+ "color":"#ffb347",
+ "platforms":["PS4",
+ 			"Xbox One"
+ 			]
+	},
+{
+ "genre":"Shooter",
+ "image_url":"http://i.imgur.com/A92WAx3.jpg?1",
+ "last_updated":"October 28, 2015",
+ "name":"Doom 4",
+ "release_date":"June 30, 2016",
+ "color":"#47ffb3",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"RPG",
+ "image_url":"http://i.imgur.com/PlGAS5E.jpg?1",
+ "last_updated":"October 28, 2015",
+ "name":"The Witcher: Blood and Wine",
+ "release_date":"March 30, 2016",
+ "color":"#4793ff",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/qjdDSbm.jpg",
+ "last_updated":"October 28, 2015",
+ "name":"Uncharted 4",
+ "release_date":"March 18, 2016",
+ "color":"#ff4793",
+ "platforms":["PS4"]
+	},
+{
+ "genre":"Action",
+ "image_url":"http://i.imgur.com/1RHMKlR.jpg",
+ "last_updated":"October 28, 2015",
+ "name":"Far Cry Primal",
+ "release_date":"February 23, 2016",
+ "color":"#ffb347",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+	},
+{
+ "genre":"Shooter",
+ "image_url":"http://i.imgur.com/g4TCVhO.jpg",
+ "last_updated":"October 28, 2015",
+ "name":"Hitman",
+ "release_date":"March 11, 2016",
+ "color":"#47ffb3",
+ "platforms":["PS4",
+ 			"Xbox One",
+ 			"PC"
+ 			]
+}
+  ]
+}

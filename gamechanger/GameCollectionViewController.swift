@@ -14,13 +14,14 @@ class GameCollectionViewController: UICollectionViewController {
     var games:[Game] = []
     var filterView:UIView = UIView()
     var emptyView:UILabel = UILabel()
-    var blueColor:UIColor = UIColor (red: 0.1725, green: 0.3608, blue: 0.6471, alpha: 1.0 )
+//    var mainColor:UIColor = UIColor (red: 0.1725, green: 0.3608, blue: 0.6471, alpha: 1.0 )
+    var mainColor = UIColor.blackColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.hidesBarsOnSwipe = true
-        navigationController?.navigationBar.barTintColor = blueColor
+        navigationController?.navigationBar.barTintColor = mainColor
 
         self.title = "Gamer's Forecast"
         
@@ -64,6 +65,7 @@ class GameCollectionViewController: UICollectionViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
@@ -163,7 +165,7 @@ class GameCollectionViewController: UICollectionViewController {
     func createFilterView() {
         let width = self.view.frame.size.width
         filterView = UIView(frame: CGRectMake(0, -100, width, 100))
-        filterView.backgroundColor = blueColor
+        filterView.backgroundColor = mainColor
         filterView.hidden = true
         self.view?.addSubview(filterView)
     }
@@ -185,12 +187,12 @@ class GameCollectionViewController: UICollectionViewController {
     func filterButtonTouched(sender: UIButton){
         
         if sender.backgroundColor == UIColor.whiteColor() {
-            sender.backgroundColor = blueColor
+            sender.backgroundColor = mainColor
             sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             NSUserDefaults.standardUserDefaults().setBool(false, forKey: (sender.titleLabel?.text)!)
         } else {
             sender.backgroundColor = UIColor.whiteColor()
-            sender.setTitleColor(blueColor , forState: .Normal)
+            sender.setTitleColor(mainColor , forState: .Normal)
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: (sender.titleLabel?.text)!)
         }
         self.toggleFilterView()
@@ -225,9 +227,9 @@ class GameCollectionViewController: UICollectionViewController {
         let filter = NSUserDefaults.standardUserDefaults().boolForKey(name as String)
         if (filter == true){
             button.backgroundColor = UIColor.whiteColor()
-            button.setTitleColor(blueColor, forState: .Normal)
+            button.setTitleColor(mainColor, forState: .Normal)
         } else {
-            button.backgroundColor = UIColor (red: 0.1725, green: 0.3608, blue: 0.6471, alpha: 1.0 )
+            button.backgroundColor = mainColor
             button.titleLabel?.textColor = UIColor.whiteColor()
         }
         
@@ -295,6 +297,9 @@ class GameCollectionViewController: UICollectionViewController {
         if (releaseDate?.hasPrefix("Q") == false &&
             releaseDate?.hasPrefix("T") == false) { //Q4, TBA
             countdown = dateFromString(releaseDate!) + " days"
+                if countdown.characters.first == "-" {
+                    countdown = "Released"
+                }
         }
         
         cell.dateLabel.frame = CGRectMake(30,10,cell.openView.frame.size.width-30,cell.openView.frame.size.height)
