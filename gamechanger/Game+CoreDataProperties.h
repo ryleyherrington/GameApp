@@ -2,7 +2,7 @@
 //  Game+CoreDataProperties.h
 //  gamechanger
 //
-//  Created by Ryley Herrington on 10/25/15.
+//  Created by Ryley Herrington on 11/3/15.
 //  Copyright © 2015 Ryley Herrington. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSString *platformString;
 @property (nullable, nonatomic, retain) NSString *releaseDate;
+@property (nonatomic) NSTimeInterval sortDate;
 @property (nullable, nonatomic, retain) NSSet<Platform *> *platforms;
 
 @end

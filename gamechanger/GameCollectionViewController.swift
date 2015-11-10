@@ -8,21 +8,26 @@
 
 import UIKit
 import Parse
+import Alamofire
 
 class GameCollectionViewController: UICollectionViewController {
     var games:[Game] = []
     var filterView:UIView = UIView()
     var emptyView:UILabel = UILabel()
+    var blueColor:UIColor = UIColor (red: 0.1725, green: 0.3608, blue: 0.6471, alpha: 1.0 )
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.hidesBarsOnSwipe = true
-        self.title = "Gamers Forecast"
+        navigationController?.navigationBar.barTintColor = blueColor
+
+        self.title = "Gamer's Forecast"
         
         self.createFilterView()
         self.createEmptyView()
         
+        collectionView?.contentInset = UIEdgeInsetsMake(self.topLayoutGuide.length, 0, 0, 0)
 
         let network = NetworkingProvider()
         network.GetGamesFromServerWithCompletion { (pGames) -> Void in
@@ -30,20 +35,56 @@ class GameCollectionViewController: UICollectionViewController {
             self.getGames()
         }
         
+      //  self.collectionView?.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: "longPress:"))
     }
+    
+//    func longPress(sender: UILongPressGestureRecognizer)
+//    {
+//        let state = sender.state as UIGestureRecognizerState
+//        
+//        if state == .Ended {
+//            return;
+//        }
+//        
+//        let p = sender.locationInView(self.collectionView)
+//        let indexPath = self.collectionView?.indexPathForItemAtPoint(p)
+//        
+//        if indexPath != nil{
+//            let currentGame = games[indexPath!.row] as? Game
+//            if ((currentGame?.sortDate) != nil) {
+//                print("RYLEY:\(currentGame?.name): \(currentGame?.sortDate)")
+//            }
+//            // get the cell at indexPath (the one you long pressed)
+////            let cell = self.collectionView?.cellForItemAtIndexPath(indexPath!) as? GameCell
+//        }
+//
+//    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+//    override func prefersStatusBarHidden() -> Bool {
+//        return true;
+//    }
+
     
     func getGames() {
+        //print(NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).last)
+
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "Game")
         
-        let resultPredicate = NSPredicate(format: "ANY platforms.platformName in %@", filterArray())
-        fetchRequest.predicate = resultPredicate
+        let platformPredicate = NSPredicate(format: "ANY platforms.platformName in %@", filterArray())
+        let sevenDaysAgo = NSDate(timeIntervalSinceNow: -7*24*60*60)
+        let datePredicate = NSPredicate(format: "sortDate > %@", sevenDaysAgo)
+
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [datePredicate, platformPredicate])
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "sortDate", ascending: true)]
         
         do {
             let results =
@@ -72,7 +113,7 @@ class GameCollectionViewController: UICollectionViewController {
         let pcFilter = defaults.boolForKey("PC")
         let ps3Filter = defaults.boolForKey("PS3")
         let x360Filter = defaults.boolForKey("Xbox 360")
-        let wiiFilter = defaults.boolForKey("Wii")
+        let wiiFilter = defaults.boolForKey("Wii U")
         
         if ps4Filter {
             filterArr.append("PS4")
@@ -90,7 +131,7 @@ class GameCollectionViewController: UICollectionViewController {
             filterArr.append("Xbox 360")
         }
         if wiiFilter {
-            filterArr.append("Wii")
+            filterArr.append("Wii U")
         }
        
         let date = NSDate()
@@ -122,7 +163,7 @@ class GameCollectionViewController: UICollectionViewController {
     func createFilterView() {
         let width = self.view.frame.size.width
         filterView = UIView(frame: CGRectMake(0, -100, width, 100))
-        filterView.backgroundColor = UIColor.blackColor()
+        filterView.backgroundColor = blueColor
         filterView.hidden = true
         self.view?.addSubview(filterView)
     }
@@ -142,15 +183,14 @@ class GameCollectionViewController: UICollectionViewController {
     
     
     func filterButtonTouched(sender: UIButton){
-        print("TOUCHED: \(sender.titleLabel?.text)")
         
         if sender.backgroundColor == UIColor.whiteColor() {
-            sender.backgroundColor = UIColor.blackColor()
+            sender.backgroundColor = blueColor
             sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             NSUserDefaults.standardUserDefaults().setBool(false, forKey: (sender.titleLabel?.text)!)
         } else {
             sender.backgroundColor = UIColor.whiteColor()
-            sender.setTitleColor(UIColor.blackColor(), forState: .Normal)
+            sender.setTitleColor(blueColor , forState: .Normal)
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: (sender.titleLabel?.text)!)
         }
         self.toggleFilterView()
@@ -162,7 +202,7 @@ class GameCollectionViewController: UICollectionViewController {
         if (filterView.hidden == true) { //show it
             filterView.hidden = false
             UIView.animateWithDuration(0.3, animations: { () -> Void in
-                self.filterView.frame = CGRectMake(0, 64, width, 100)
+                self.filterView.frame = CGRectMake(0, 0, width, 100)
                 }, completion: { (finished) -> Void in
                     self.filterView.hidden = false
             })
@@ -185,9 +225,9 @@ class GameCollectionViewController: UICollectionViewController {
         let filter = NSUserDefaults.standardUserDefaults().boolForKey(name as String)
         if (filter == true){
             button.backgroundColor = UIColor.whiteColor()
-            button.setTitleColor(UIColor.blackColor(), forState: .Normal)
+            button.setTitleColor(blueColor, forState: .Normal)
         } else {
-            button.backgroundColor = UIColor.blackColor()
+            button.backgroundColor = UIColor (red: 0.1725, green: 0.3608, blue: 0.6471, alpha: 1.0 )
             button.titleLabel?.textColor = UIColor.whiteColor()
         }
         
@@ -242,7 +282,6 @@ class GameCollectionViewController: UICollectionViewController {
         
         let width = cell.frame.size.width;
         let height = cell.frame.size.height;
-        
         cell.imageView.image = UIImage(named: "placeholder")
         cell.openView.frame = CGRectMake(width, 0, width * 2/3, height)
         
@@ -294,6 +333,18 @@ class GameCollectionViewController: UICollectionViewController {
             cell.imageView.image = returnedImage
         } else{
             let loadURL = NSURL(string:game.imageUrl!)
+//            Alamofire.request(.GET, loadURL!).validate().responseImage() {
+//                (request, _, image, error) in
+//                if error != nil {
+//                    print("failed loading image")
+//                    return
+//                }
+//                
+//                if error == nil {
+//                    cell.imageView.image = image
+//                }
+//            }
+
             let loadRequest = NSURLRequest(URL:loadURL!)
             NSURLConnection.sendAsynchronousRequest(loadRequest,
                 queue: NSOperationQueue.mainQueue()) {
@@ -349,6 +400,12 @@ class GameCollectionViewController: UICollectionViewController {
                     // Send the dimensions to Parse along with the 'read' event
                     PFAnalytics.trackEvent("opened", dimensions: dimensions)
             })
+        }
+    }
+   
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        if filterView.hidden == false {
+            toggleFilterView()
         }
     }
     

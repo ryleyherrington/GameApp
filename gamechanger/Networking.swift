@@ -25,6 +25,9 @@ import Alamofire
         let fetchRequest = NSFetchRequest(entityName: "Game")
         var games:[Game] = []
         
+        let df = NSDateFormatter()
+        df.dateFormat = "MMMM-dd-yyyy"
+        
         do {
             let results =
             try managedContext.executeFetchRequest(fetchRequest)
@@ -110,6 +113,7 @@ import Alamofire
                     
                     let game = NSManagedObject(entity: gameEntity!, insertIntoManagedObjectContext: managedContext) as! Game
                     
+                    
                     game.setValue(name, forKey: "name")
                     game.setValue(lastUpdate, forKey: "lastUpdated")
                     game.setValue(releaseDate, forKey: "releaseDate")
@@ -117,6 +121,12 @@ import Alamofire
                     game.setValue(genre, forKey: "genre")
                     game.setValue(imageUrl, forKey: "imageUrl")
                     game.setValue(platformString, forKey: "platformString")
+                    if (releaseDate.hasPrefix("Q") == false &&
+                        releaseDate.hasPrefix("T") == false) { //Q4, TBA
+                            game.setValue(df.dateFromString(releaseDate), forKey: "sortDate")
+                    } else {
+                        game.setValue(df.dateFromString("April 18, 2018"), forKey: "sortDate")
+                    }
                     
                     for platform in platformSringArray {
                         let platformObj = NSManagedObject(entity: platformEntity!, insertIntoManagedObjectContext: managedContext) as! Platform

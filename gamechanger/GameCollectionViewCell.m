@@ -23,15 +23,6 @@
         self.backgroundColor = [UIColor grayColor];
         self.isOpen = NO;
         
-//        self.title = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0, frame.size.width - 20, 44.f)];
-//        self.title.textAlignment = NSTextAlignmentLeft;
-//        self.title.textColor = [UIColor whiteColor];
-//        self.title.backgroundColor = [UIColor clearColor];
-//        self.title.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18.f];
-//        self.title.numberOfLines = 1;
-//        
-//        [self addSubview:self.title];;
-        
         self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         _imageView.clipsToBounds = YES;

@@ -8,9 +8,9 @@
         <!--Game Collection View Controller-->
         <scene sceneID="mpQ-tf-SBz">
             <objects>
-                <collectionViewController id="yON-Th-2im" customClass="GameCollectionViewController" customModule="gamechanger" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController automaticallyAdjustsScrollViewInsets="NO" id="yON-Th-2im" customClass="GameCollectionViewController" customModule="gamechanger" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JsN-ru-eaa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -22,7 +22,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCell" id="opG-77-de2" customClass="GameCell" customModule="gamechanger" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="222"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="222"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="222"/>
@@ -83,6 +83,7 @@
                             <outlet property="delegate" destination="yON-Th-2im" id="Tb7-c3-u4v"/>
                         </connections>
                     </collectionView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="AHH-v2-x6P">
                         <barButtonItem key="rightBarButtonItem" image="filter" id="EXB-pG-fwp">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -91,6 +92,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNb-SS-NTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,11 +102,14 @@
         <scene sceneID="SMa-oA-G3K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iNm-ZQ-Prh" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fuK-mB-JTd">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fuK-mB-JTd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.15686274510000001" green="0.4039215686" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -113,7 +118,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N14-jC-3CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="555"/>
+            <point key="canvasLocation" x="1103" y="555"/>
         </scene>
     </scenes>
     <resources>

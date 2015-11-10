@@ -23,7 +23,7 @@
                                                           [UIColor whiteColor],
                                                           NSForegroundColorAttributeName, nil]];
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.1725 green:0.3608 blue:0.6471 alpha:1.0]];
     
         NSDictionary* defaults = @{@"PS4":@true,@"Xbox One":@true,@"PC":@true,@"PS3":@false,@"Xbox 360":@false,@"Wii":@false};
     //NSMutableDictionary *defaults = [NSMutableDictionary new];
@@ -99,7 +99,7 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"gamechanger.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:@{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES} error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
